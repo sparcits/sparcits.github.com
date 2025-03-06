@@ -673,8 +673,8 @@ button {
      overflow-x: auto;
      display: flex;
      padding-bottom: 2%;
+     scrollbar-color: #002733 #ffffff;
 }
-
 
 #journey .journey-container:first-child {
      margin-top: 240px;
@@ -822,8 +822,25 @@ button {
      margin-left: 2%;
 }
 
+
+#journey .journey-container:nth-of-type(6) .journey-box>.logo {
+     height: 40%;
+     background: rgba(0, 184, 172, 0.3);
+     border-top-left-radius: .7rem;
+     border-top-right-radius: .7rem;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+     padding: 1rem;
+}
+
+#journey .journey-container:nth-of-type(6) .journey-box>.details {
+     padding: 0 1.5rem;
+}
+
 #journey .journey-container:nth-of-type(6) .journey-box {
-     height: 400px;
+     height: 480px;
 }
 
 #journey .journey-container:nth-of-type(7) {
@@ -833,6 +850,26 @@ button {
 
 #journey .journey-container:nth-of-type(7) .journey-box {
      height: 440px;
+}
+
+#journey .journey-container:nth-of-type(7) .journey-box>.logo {
+     height: 40%;
+     background: rgba(0, 184, 172, 0.3);
+     border-top-left-radius: .7rem;
+     border-top-right-radius: .7rem;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+     padding: 1rem;
+}
+
+#journey .journey-container:nth-of-type(7) .journey-box>.details {
+     padding: 0 1.5rem;
+}
+
+#journey .journey-container:nth-of-type(7) .journey-box {
+     height: 520px;
 }
 
 #journey .journey-container h2 {
@@ -924,12 +961,24 @@ button {
 /* End journey */
 
 /* Global Presence */
+#global-presence{
+     margin-top: 100px;
+}
 #global-presence .box {
      padding: 7%;
 }
 
+#global-presence .detail-box{
+     background: rgba(0, 184, 172, 0.3);
+     height: 100%;
+     width: 100%;
+     padding: 5%;
+}
+
 #global-presence .map-box {
      position: relative;
+     background: rgba(0, 184, 172, 0.1);
+     padding: 2%;
 }
 
 #global-presence .point-ind {
