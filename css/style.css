@@ -275,10 +275,9 @@ button {
 #header {
      width: 100%;
      padding: 30px 30px;
-     background: transparent;
      position: absolute;
      z-index: 999;
-     background: #002733;
+     background-image: url(../images/particles.gif);
 }
 
 #header .brand-logo {
@@ -539,11 +538,16 @@ button {
      padding: 0 !important;
 }
 
+#capabilities .carousel-inner{
+     height: 80vh;
+}
+
 #capabilities .box_first_of_type {
      background-image: url(../images/team.jpg);
      background-repeat: no-repeat;
      background-size: 100%;
      padding-top: 100px;
+     height: 100%;
 }
 
 #capabilities .box_second_of_type {
@@ -551,6 +555,7 @@ button {
      background-repeat: no-repeat;
      background-size: 100%;
      padding-top: 100px;
+     height: 100%;
 }
 
 #capabilities .box_third_of_type {
