@@ -277,7 +277,7 @@ button {
      padding: 30px 30px;
      position: absolute;
      z-index: 999;
-     background-image: url(../images/particles.gif);
+     background: var(--dark-blue);
 }
 
 #header .brand-logo {
