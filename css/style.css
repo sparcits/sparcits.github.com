@@ -538,8 +538,9 @@ button {
      padding: 0 !important;
 }
 
-#capabilities .carousel-inner{
+#capabilities .carousel-inner {
      height: 80vh;
+     background: var(--dark-blue);
 }
 
 #capabilities .box_first_of_type {
@@ -966,14 +967,15 @@ button {
 /* End journey */
 
 /* Global Presence */
-#global-presence{
+#global-presence {
      margin-top: 100px;
 }
+
 #global-presence .box {
      padding: 7%;
 }
 
-#global-presence .detail-box{
+#global-presence .detail-box {
      background: rgba(0, 184, 172, 0.3);
      height: 100%;
      width: 100%;
@@ -1210,13 +1212,38 @@ button {
 /* End Service Catalog */
 
 /* Success Stories */
-#success-stories-hero {
-     background-image: linear-gradient(270deg, #2bded3, transparent);
-     padding-top: 100px;
+#success-stories-hero .carousel-inner {
+     height: 80vh;
+     background: var(--dark-blue);
 }
 
-#success-stories-hero .row {
+#success-stories-hero .container-fluid {
+     padding: 0 !important;
+}
+
+
+#success-stories-hero .box_first_of_type {
+     background-image: url(../images/success-story-image.jpg);
+     background-repeat: no-repeat;
+     background-size: 100%;
+     padding-top: 100px;
+     height: 100%;
+}
+
+#success-stories-hero .box_second_of_type {
+     background-image: url(../images/background-waves.jpg);
+     background-repeat: no-repeat;
+     background-size: 100%;
+     padding-top: 100px;
+     height: 100%;
+}
+
+#success-stories-hero .carousel-item>div {
      padding: 7%;
+}
+
+#success-stories-hero .box>div {
+     width: 50%;
 }
 
 #success-achievement {
@@ -1236,10 +1263,90 @@ button {
 #success-achievement .box {
      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
      background-image: linear-gradient(0deg, rgba(0, 184, 172, 0.39), transparent 45%);
-     border-radius: 0px;
+     border-radius: .7rem;
      border: none;
+     height: 430px;
 }
 
+#success-achievement .box:hover {
+     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+     transform: scale(1.10, 1.10);
+     transition: 0.5s;
+}
+
+#success-achievement .vw-china {
+     background-image: url(../images/china.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-top: 100px;
+     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+#success-achievement .vw-china h5 {
+     color: #000;
+     font-weight: 600;
+}
+
+#success-achievement .vw-china p {
+     color: #000;
+}
+
+#success-achievement .vwc-investment{
+     background-image: url(../images/vwc-investment-company.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-top: 100px;
+     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+#success-achievement .man-conversion{
+     background-image: url(../images/man-trucks.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-top: 100px;
+     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+#success-achievement .vw-anhui {
+     background-image: url(../images/china.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-top: 100px;
+     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+#success-achievement .vw-anhui h5, #success-achievement .vw-anhui p {
+     color: #000;
+}
+
+#success-achievement .vw-australia {
+     background-image: url(../images/vw-australia.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-top: 100px;
+     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+#success-achievement .audi-china {
+     background-image: url(../images/audi-china.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-top: 100px;
+     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+#success-achievement .powerco-se {
+     background-image: url(../images/powerco-se.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-top: 100px;
+     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+#success-achievement .title-box {
+     display: flex;
+     align-items: center;
+}
 
 #success-achievement .box-title {
      font-size: 20px;
