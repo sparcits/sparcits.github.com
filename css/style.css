@@ -48,6 +48,7 @@ Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
      --black: #000;
      --text-color: #fff;
      --vw-group: #c2fe06;
+     --sidenav-size: 150px;
 }
 
 * {
@@ -275,9 +276,10 @@ button {
 #header {
      width: 100%;
      padding: 30px 30px;
-     position: absolute;
+     position: fixed;
      z-index: 999;
-     background: var(--dark-blue);
+     background: rgba(0, 39, 51);
+     border-bottom: 1px solid rgba(0, 184, 172, .2);
 }
 
 #header .brand-logo {
@@ -286,6 +288,27 @@ button {
 
 #header .nav-link {
      font-size: 1.2rem;
+     display: block;
+     position: relative;
+     margin: 0 10px;
+}
+
+#header .nav-link::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 0.1em;
+     background-color: rgba(0, 184, 172, .8);
+     opacity: 0;
+     transition: opacity 300ms, transform 300ms;
+}
+
+#header .nav-link:hover::after,
+#header .nav-link:focus::after {
+     opacity: 1;
+     transform: translate3d(0, 0.2em, 0);
 }
 
 #header .dropdown-menu {
@@ -308,6 +331,46 @@ button {
 }
 
 /* End Header Area */
+
+/* Sidenav */
+#sidebar-wrapper {
+     position: fixed;
+     min-height: 100vh;
+     transition: all 0.25s ease-out;
+     background: var(--dark-blue);
+     width: var(--sidenav-size);
+     z-index: 10;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-right: 1px solid rgba(0, 184, 172, .2);
+}
+
+#sidebar-wrapper .nav .nav-item>a {
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     color: var(--text-color);
+     padding: .3rem 0 .3rem .5rem;
+}
+
+#sidebar-wrapper .nav .active {
+     background: rgba(0, 184, 172, .2);
+     border-radius: 12px;
+}
+
+
+#sidebar-wrapper .nav .nav-item>a>p {
+     font-size: 10px;
+     padding: 0 .5rem;
+}
+
+#sidebar-wrapper .nav .nav-item .circle {
+     width: 20px;
+     height: 20px;
+     background: #fff;
+     border-radius: 50%;
+}
 
 /* Hero Section */
 
@@ -618,12 +681,10 @@ button {
      padding-bottom: 5%;
 }
 
-#team-achievements .box-container {
-     padding: 5%;
-}
 
 #team-achievements .box {
-     background: rgba(0, 184, 172, 0.2);
+     /* background: rgba(0, 184, 172, 0.2); */
+     background-image: linear-gradient(270deg, rgba(0, 184, 172, 0.39), transparent 66%);
      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
      height: 100%;
      display: flex;
@@ -632,7 +693,7 @@ button {
 }
 
 #team-achievements .box>.image {
-     width: 30%;
+     padding: 0 4%;
      background: rgba(0, 184, 172, 0.3);
      border-top-left-radius: .7rem;
      border-bottom-left-radius: .7rem;
@@ -670,10 +731,29 @@ button {
 }
 
 
-/* #journey h2 p {
-     color: var(--text-color);
+#journey .sticky-parent {
+     height: 700vh;
 }
- */
+
+#journey .sticky-parent .sticky {
+     position: sticky;
+     top: 0px;
+     max-height: 100vh;
+     overflow-x: hidden;
+     overflow-y: hidden;
+}
+
+#journey .sticky-parent .sticky .item-container {
+     display: block;
+     min-width: 50vw;
+     height: 70vh;
+}
+
+#journey .sticky-parent .sticky .horizontal {
+     display: flex;
+}
+
+
 
 #journey .journey {
      overflow-x: auto;
@@ -682,7 +762,7 @@ button {
      scrollbar-color: #002733 #ffffff;
 }
 
-#journey .journey-container:first-child {
+/* #journey .journey-container:first-child {
      margin-top: 240px;
 }
 
@@ -703,7 +783,7 @@ button {
 
 #journey .journey-container:first-child .journey-box>.details {
      padding: 0 1.5rem;
-}
+} */
 
 /* #journey .journey-container:first-child .journey-box>.circle{
      position: relative;
@@ -724,7 +804,7 @@ button {
      align-items: center;
 } */
 
-#journey .journey-container:nth-of-type(2) {
+/* #journey .journey-container:nth-of-type(2) {
      margin-top: 200px;
      margin-left: 2%;
 }
@@ -900,7 +980,7 @@ button {
 
 #journey .journey-box li {
      font-size: 8px;
-}
+} */
 
 /* #journey .journey-box {
      padding-inline-start: 1.5em;
@@ -1291,7 +1371,7 @@ button {
      color: #000;
 }
 
-#success-achievement .vwc-investment{
+#success-achievement .vwc-investment {
      background-image: url(../images/vwc-investment-company.jpg);
      background-repeat: no-repeat;
      background-size: cover;
@@ -1299,7 +1379,7 @@ button {
      transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
 }
 
-#success-achievement .man-conversion{
+#success-achievement .man-conversion {
      background-image: url(../images/man-trucks.jpg);
      background-repeat: no-repeat;
      background-size: cover;
@@ -1315,7 +1395,8 @@ button {
      transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
 }
 
-#success-achievement .vw-anhui h5, #success-achievement .vw-anhui p {
+#success-achievement .vw-anhui h5,
+#success-achievement .vw-anhui p {
      color: #000;
 }
 
@@ -1372,6 +1453,32 @@ button {
      font-weight: 400;
      text-transform: uppercase;
      color: #fff;
+}
+
+#vw-grp-china-hero {
+     background-image: url(../images/vw-grp-china-banner.png);
+     height: 100vh;
+     margin-left: var(--sidenav-size);
+     background-size: cover;
+}
+
+#vw-grp-china-hero .container,
+#vw-grp-china-hero .container .row {
+     height: 100%;
+}
+
+#vw-grp-china-hero .container .row .details {
+     background: var(--dark-blue);
+     padding: 5%;
+}
+
+#vw-grp-china-hero .about {
+     background: var(--dark-blue);
+     padding: 5%;
+}
+
+#vw-grp-china-about {
+     margin-left: var(--sidenav-size);
 }
 
 #story-hero {
