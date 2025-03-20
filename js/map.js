@@ -82,12 +82,12 @@ var projects = {
 function displayProjects(country) {
     var proj = projects[country];
     /* Clear all elements in projects-box */
-    var projectsContainer = document.getElementById("projects");
+    var projectsContainer = document.getElementById("country-list");
     projectsContainer.innerHTML = "";
     /* insert title in container */
-    var h2 = document.createElement("h2");
-    h2.innerText = proj[0];
-    projectsContainer.appendChild(h2);
+    var h3 = document.createElement("h3");
+    h3.innerText = proj[0];
+    projectsContainer.appendChild(h3);
     /* Insert Projects */
     var ul = document.createElement("ul");
     for (var i = 1; i < proj.length; i++) {
@@ -96,15 +96,11 @@ function displayProjects(country) {
         ul.appendChild(li);
     }
     projectsContainer.appendChild(ul);
-    prDisplayToggle();
+
+    /* Set height of container */
+    let height = document.getElementById("map-box").clientHeight;
+    projectsContainer.style.height = height + 'px';
+    projectsContainer.style.overflowY = 'Scroll';
 }
 
-function prDisplayToggle() {
-    var projectsContainer = document.getElementById("projects-container");
-    if (projectsContainer.style.display === 'none') {
-        projectsContainer.style.display = "flex";
-    }
-    else {
-        projectsContainer.style.display = "none"
-    }
-}
+
