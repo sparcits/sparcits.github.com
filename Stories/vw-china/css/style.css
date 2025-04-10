@@ -1,0 +1,740 @@
+/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,600,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap');
+
+/* ===========================================================
+Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
+=============================================================*/
+@font-face {
+     font-family: 'VW Head Regular';
+     font-style: normal;
+     font-weight: normal;
+     src: local('VW Head Regular'), url('fonts/VWHeadRegular.woff') format('woff');
+}
+
+
+@font-face {
+     font-family: 'VW Head Bold';
+     font-style: normal;
+     font-weight: normal;
+     src: local('VW Head Bold'), url('fonts/VWHeadBold.woff') format('woff');
+}
+
+
+@font-face {
+     font-family: 'VW Text Regular';
+     font-style: normal;
+     font-weight: normal;
+     src: local('VW Text Regular'), url('fonts/VWTextRegular.woff') format('woff');
+}
+
+
+@font-face {
+     font-family: 'VW Text Bold';
+     font-style: normal;
+     font-weight: normal;
+     src: local('VW Text Bold'), url('fonts/VWTextBold.woff') format('woff');
+}
+
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+:root {
+     --dark-blue: #002733;
+     --black: #000;
+     --text-color: #fff;
+     --vw-group: #c2fe06;
+     --sidenav-size: 150px;
+     --left-position: 80%;
+     --transition-time: 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+     box-sizing: border-box !important;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+     background: rgb(0, 83, 87);
+     background: linear-gradient(113deg, rgba(0, 83, 87, 1) 0%, rgba(0, 54, 63, 1) 18%, rgba(0, 39, 51, 1) 100%);
+     color: var(--text-color);
+     font-size: 1rem;
+     font-family: 'VW Head Regular', 'VW Text Regular';
+     line-height: 1.80857;
+     font-weight: normal;
+     min-height: 100vh;
+}
+
+a {
+     color: #1f1f1f;
+     text-decoration: none !important;
+     outline: none !important;
+     -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+}
+
+.custom-container {
+     padding-top: 10%;
+     padding-left: 10%;
+     padding-right: 10%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     letter-spacing: 0;
+     font-weight: normal;
+     position: relative;
+     padding: 0 0 10px 0;
+     font-weight: normal;
+     line-height: normal;
+     color: var(--text-color);
+     margin: 0
+}
+
+h3 {
+     font-size: 18px;
+}
+
+h4 {
+     font-size: 16px
+}
+
+h5 {
+     font-size: 14px
+}
+
+h6 {
+     font-size: 13px
+}
+
+*,
+*::after,
+*::before {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+     color: #000;
+     text-decoration: none !important;
+     opacity: 1
+}
+
+button:focus {
+     outline: none;
+}
+
+ul,
+li,
+ol {
+     margin: 0px;
+     padding: 0px;
+     list-style: none;
+}
+
+p {
+     margin: 0px;
+     font-weight: 500;
+     font-size: 15px;
+     line-height: 24px;
+}
+
+a {
+     color: #222222;
+     text-decoration: none;
+     outline: none !important;
+}
+
+a,
+.btn {
+     text-decoration: none !important;
+     outline: none !important;
+     -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+}
+
+img {
+     max-width: 100%;
+     height: auto;
+}
+
+:focus {
+     outline: 0;
+}
+
+.btn-custom {
+     margin-top: 20px;
+     background-color: transparent !important;
+     border: 2px solid #ddd;
+     padding: 12px 40px;
+     font-size: 16px;
+}
+
+.lead {
+     font-size: 18px;
+     line-height: 30px;
+     color: #767676;
+     margin: 0;
+     padding: 0;
+}
+
+.form-control:focus {
+     border-color: #ffffff !important;
+     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+.navbar-form input {
+     border: none !important;
+}
+
+.badge {
+     font-weight: 500;
+}
+
+blockquote {
+     margin: 20px 0 20px;
+     padding: 30px;
+}
+
+button {
+     border: 0;
+     margin: 0;
+     padding: 0;
+     cursor: pointer;
+}
+
+.full {
+     float: left;
+     width: 100%;
+}
+
+.h-100 {
+     height: 100%;
+}
+
+.full {
+     width: 100%;
+     float: left;
+     margin: 0;
+     padding: 0;
+}
+
+.bg-dark-grey {
+     background-color: #002733;
+}
+
+.bg-gradient-dark {
+     background-image: linear-gradient(270deg, #2bded3, transparent);
+     background-color: #121e2b;
+}
+
+
+/* Preloader */
+
+#preloader {
+     position: fixed;
+     z-index: 9999999;
+     background: #fff;
+     width: 100%;
+     height: 100%;
+}
+
+#preloader .loader {
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+
+/* Header */
+#header {
+     width: 100%;
+     padding: 30px 30px;
+     position: fixed;
+     z-index: 999;
+     background: var(--dark-blue);
+     border-bottom: 1px solid rgba(0, 184, 172, .2);
+}
+
+#header .brand-logo {
+     font-size: 1.5rem;
+}
+
+#header .nav-link {
+     font-size: 1.2rem;
+     display: block;
+     position: relative;
+     margin: 0 10px;
+     color: #fff;
+}
+
+#header .nav-link::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 0.1em;
+     background-color: rgba(0, 184, 172, .8);
+     opacity: 0;
+     transition: opacity 300ms, transform 300ms;
+}
+
+#header .nav-link:hover::after,
+#header .nav-link:focus::after {
+     opacity: 1;
+     transform: translate3d(0, 0.2em, 0);
+}
+
+#header .dropdown-menu {
+     background-color: #333533;
+}
+
+#header .dropdown-menu h3,
+#header .dropdown-menu h5,
+#header .dropdown-menu i {
+     color: #fff;
+}
+
+#header .dropdown-menu h5 {
+     font-weight: bold;
+}
+
+#header .dropdown-menu .desc-text {
+     font-size: 12px;
+     color: #fff;
+}
+
+/* End Header Area */
+
+/* Sidenav */
+#sidebar-wrapper {
+     position: fixed;
+     min-height: 100vh;
+     transition: all 0.25s ease-out;
+     background: var(--dark-blue);
+     width: var(--sidenav-size);
+     z-index: 10;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-right: 1px solid rgba(0, 184, 172, .2);
+}
+
+#sidebar-wrapper .nav .nav-item>a {
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     color: var(--text-color);
+     padding: .3rem 0 .3rem .5rem;
+}
+
+#sidebar-wrapper .nav .active {
+     background: rgba(0, 184, 172, .2);
+     border-radius: 12px;
+}
+
+
+#sidebar-wrapper .nav .nav-item>a>p {
+     font-size: 10px;
+     padding: 0 .5rem;
+}
+
+#sidebar-wrapper .nav .nav-item .circle {
+     width: 20px;
+     height: 20px;
+     background: #fff;
+     border-radius: 50%;
+}
+
+/* Hero Section */
+
+#hero {
+     background: #002733;
+     color: #000;
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     height: 85vh;
+}
+
+#hero .btn-main {
+     background: #c2fe06;
+}
+
+.dropdown-menu {
+     border: none;
+}
+
+/* Social Proof */
+/* #social{
+     padding-top: 10%;
+     background: #202020;
+}
+
+#social .logo-box {
+     border: 1px solid white;
+     height: 150px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+} */
+
+/* End Social Proof */
+
+/* Offering */
+#offering {
+     height: 15vh;
+     background: #fff;
+     border-bottom: 3px solid #e5e5e5;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+#offering .horizontal-box {
+     display: flex;
+     width: 100%;
+     justify-content: space-around;
+     align-items: center;
+}
+
+#offering .horizontal-box .horizontal-item .logo {
+     width: 80px;
+}
+
+/* Offering */
+
+/* Timeline */
+#timeline {
+     padding-top: 10%;
+     padding-bottom: 8%;
+}
+
+#timeline h2 {
+     color: #002733;
+}
+
+#timeline p {
+     color: #002733;
+}
+
+#timeline .spacer {
+     float: right;
+}
+
+#timeline .card {
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     padding: 20px;
+}
+
+.timeline__date {
+     font-size: 0.833em;
+     line-height: 2.4;
+}
+
+.timeline__dot {
+     background-color: #c2fe06;
+     border-radius: 50%;
+     display: inline-block;
+     flex-shrink: 0;
+     margin: 0.625em 0;
+     margin-inline-end: 1em;
+     position: relative;
+     width: 0.75em;
+     height: 0.75em;
+}
+
+.timeline__item {
+     position: relative;
+     padding-bottom: 2.25em;
+     padding-left: 2.25em;
+}
+
+.timeline__item:not(:last-child):before {
+     background-color: #002733;
+     content: "";
+     display: block;
+     position: absolute;
+     top: 1em;
+     left: 2.625em;
+     width: 0.125em;
+     height: 100%;
+     transform: translateX(-50%);
+}
+
+.timeline__item-header {
+     display: flex;
+}
+
+.timeline__item-body {
+     display: flex;
+}
+
+.timeline__meta {
+     width: 100%;
+}
+
+.timeline__title {
+     font-size: 1.5em;
+     line-height: 1.333;
+}
+
+/* End Timeline */
+
+/* Testimonial */
+#testimonial {
+     background: #002733;
+}
+
+#testimonial .testimonial-item {
+     text-align: center;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#testimonial .card {
+     background: none;
+     width: 18rem;
+}
+
+#testimonial .card>img {
+     border-radius: 20px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* End Testimonial */
+
+/* FAQ */
+
+
+/* End FAQ */
+
+
+/* Team */
+#team {
+     padding-top: 5%;
+     padding-bottom: 8%;
+     background: #002733;
+}
+
+#team .spacer {
+     float: right;
+}
+
+/* End Team */
+
+/* Footer */
+#footer {
+     background-color: #000000;
+}
+
+/* End Footer */
+
+/* Custom */
+
+.h-fit {
+     height: fit-content
+}
+
+.top-60 {
+     top: 60px;
+}
+
+.img-icon-1 {
+     height: 30px;
+}
+
+.img-icon-2 {
+     height: 80px;
+}
+
+.spacer {
+     display: block;
+     width: 100px;
+     height: 2px;
+     background: #c2fe06;
+}
+
+.text-end {
+     text-align: end;
+}
+
+.pointer {
+     cursor: pointer;
+}
+
+#vw-grp-china-hero {
+     background-size: cover;
+     height: 95vh;
+     display: flex;
+     align-items: center;
+
+     .details {
+          h2 {
+               font-size: 3rem;
+          }
+     }
+
+     .tag-container {
+          flex-basis: 50%;
+          display: grid;
+          gap: 10px;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 100px);
+          margin: auto;
+
+          .tag {
+               border: 1px solid rgba(255, 255, 255, .25);
+               background-color: rgba(0, 184, 172, .2);
+               text-align: center;
+               padding: auto;
+               padding: 5%;
+
+               h3 {
+                    font-size: 1rem;
+               }
+
+               p {
+                    font-size: .6rem;
+               }
+          }
+
+          .tag:nth-of-type(1) {
+               grid-row: 1/3;
+          }
+
+          .tag:nth-of-type(2) {
+               grid-column: 2/4;
+          }
+
+          .tag:nth-of-type(3) {
+               grid-column: 2/3;
+          }
+
+          .tag:nth-of-type(4) {
+               grid-row: 2 / 4;
+               grid-column: 3;
+          }
+
+          .tag:nth-of-type(5) {
+               grid-column: 1 / 2;
+          }
+
+          .tag:nth-of-type(6) {
+               grid-column: 2 / 3;
+          }
+     }
+}
+
+/* #vw-grp-china-hero .container,
+#vw-grp-china-hero .container .row {
+     height: 100%;
+} */
+
+#vw-grp-china-hero .container .row .details {
+     padding: 5%;
+}
+
+#vw-grp-china-hero .about {
+     background: var(--dark-blue);
+     padding: 5%;
+}
+
+#vw-grp-china-about {
+     h2 {
+          font-size: 3rem;
+          margin-bottom: 2rem;
+          margin-top: 4rem;
+     }
+
+     .list {
+          padding-inline-start: 1.5em;
+          font-weight: 400;
+
+          li {
+               list-style-type: square;
+               margin-bottom: 15px;
+
+               &::marker {
+                    color: rgba(255, 255, 255, .5);
+               }
+          }
+     }
+}
+
+#story-hero {
+     background-image: linear-gradient(270deg, #2bded3, transparent);
+     padding-top: 100px;
+}
+
+#story-hero .row {
+     padding: 7%;
+}
+
+#story-intro {
+     padding-top: 10%;
+     padding-bottom: 8%;
+}
+
+#story-intro .details__container {
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     border-radius: 20px;
+}
+
+#story-intro .list {
+     padding-inline-start: 1.5em;
+     font-weight: 400;
+
+     ::marker {
+          content: "*";
+          color: #2bded3;
+     }
+}
+
+#story-intro .list>li {
+     position: relative;
+     padding-inline-start: 0.5em;
+     padding-top: 1.5em;
+     border-bottom: 1px solid #48b2;
+     cursor: default;
+     transition: color 0.4s;
+
+     &:hover {
+          color: #2bded3;
+
+          &::marker {
+               font-weight: 700;
+          }
+     }
+}
