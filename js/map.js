@@ -80,6 +80,7 @@ var projects = {
     ]
 }
 function displayProjects(country) {
+    let overFlow = false;
     var proj = projects[country];
     /* Clear all elements in projects-box */
     var projectsContainer = document.getElementById("country-list");
@@ -91,6 +92,7 @@ function displayProjects(country) {
     /* Insert Projects */
     var ul = document.createElement("ul");
     for (var i = 1; i < proj.length; i++) {
+        i>6 ? projectsContainer.style.overflowY = 'Scroll' : projectsContainer.style.overflowY = 'none' ;
         var li = document.createElement("li");
         li.innerHTML = proj[i];
         ul.appendChild(li);
@@ -100,7 +102,8 @@ function displayProjects(country) {
     /* Set height of container */
     let height = document.getElementById("map-box").clientHeight;
     projectsContainer.style.height = height + 'px';
-    projectsContainer.style.overflowY = 'Scroll';
+    
+    
 }
 
 
