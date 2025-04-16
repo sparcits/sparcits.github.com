@@ -47,7 +47,7 @@ Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
      --dark-blue: #002733;
      --black: #000;
      --text-color: #fff;
-     --vw-group: #c2fe06;
+     --vw-group: #6bfff4;
      --sidenav-size: 150px;
      --left-position: 90%;
      --transition-time: 1.2s cubic-bezier(0.25, 1, 0.5, 1);
@@ -389,7 +389,7 @@ button {
 }
 
 #hero .btn-main {
-     background: #c2fe06;
+     background: #6bfff4;
 }
 
 .dropdown-menu {
@@ -464,7 +464,7 @@ button {
 }
 
 .timeline__dot {
-     background-color: #c2fe06;
+     background-color: #6bfff4;
      border-radius: 50%;
      display: inline-block;
      flex-shrink: 0;
@@ -582,7 +582,7 @@ button {
      display: block;
      width: 100px;
      height: 2px;
-     background: #c2fe06;
+     background: #6bfff4;
 }
 
 .text-end {
@@ -869,11 +869,11 @@ button {
                width: 90px;
                height: 60px;
                font-size: 15px;
-               color: #c2fe06;
+               color: #6bfff4;
           }
 
           .active:before {
-               border: 4px solid #c2fe06;
+               border: 4px solid #6bfff4;
           }
 
           li {
@@ -921,22 +921,38 @@ button {
      }
 
      .details {
-          display: flex;
+          /* display: flex;
           justify-content: flex-start;
-          align-items: center;
+          align-items: center; */
           margin-bottom: 5%;
 
           h6 {
                font-size: 1rem;
           }
 
-          .col-3 {
-               width: 25%;
-               height: 100px;
+          .col-12 {
                background: rgba(0, 184, 172, .2);
+               height: 60px;
+
+               img {
+                    width: 120px;
+                    margin: 15px 15px 15px 0px;
+               }
+          }
+
+          .col-4 {
+               width: 25%;
+               height: 60px;
+               background: rgba(0, 184, 172, .1);
                display: flex;
                justify-content: center;
                align-items: center;
+
+               p {
+                    font-weight: 900;
+                    font-size: 10px;
+                    color: #99d1cd;
+               }
           }
 
           img {
@@ -945,22 +961,17 @@ button {
                align-items: center;
           }
 
-          .col-9 {
+          .col-8 {
                width: 75%;
-               height: 100px;
-               background: rgba(0, 184, 172, .1);
+               height: 60px;
+               background: rgba(0, 184, 172, .05);
                display: flex;
                flex-direction: column;
                justify-content: center;
 
-               p {
-                    font-weight: 900;
-                    font-size: 10px;
-                    color: #c2fe06;
-               }
-
                h6 {
-                    font-size: 13px;
+                    font-size: 11px;
+                    padding: 0;
                }
           }
      }
@@ -1029,7 +1040,7 @@ button {
 
 #global-presence .map-box .pin::before {
      content: '';
-     background: #c2fe06;
+     background: #6bfff4;
      position: absolute;
      width: 100%;
      height: 100%;
@@ -1131,13 +1142,18 @@ button {
 }
 
 #global-presence .map-box .Mexico {
-     left: 23%;
-     top: 38%;
+     left: 24%;
+     top: 44%;
 }
 
 #global-presence .map-box .Brazil {
      left: 36%;
      top: 64%;
+}
+
+#global-presence .map-box .South-Africa {
+     left: 55%;
+     top: 78%;
 }
 
 
