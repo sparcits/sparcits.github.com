@@ -18,7 +18,6 @@ Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
      src: local('VW Head Regular'), url('fonts/VWHeadRegular.woff') format('woff');
 }
 
-
 @font-face {
      font-family: 'VW Head Bold';
      font-style: normal;
@@ -595,9 +594,6 @@ button {
 
 
 /* Capabilities */
-/* #capabilities {
-     padding-top: 100px;
-} */
 
 #capabilities .container-fluid {
      padding: 0 !important;
@@ -605,38 +601,67 @@ button {
 
 #capabilities .carousel-inner {
      height: 95vh;
-     background: var(--dark-blue);
+     background: #001F3F;
+     /* fallback for var(--dark-blue) */
+}
+
+#capabilities .carousel-item {
+     height: 95vh;
+     display: flex;
+     align-items: center;
+     background-size: cover;
+     background-position: center;
+     color: white;
+     position: relative;
 }
 
 #capabilities .box_first_of_type {
      background-image: url(../images/banner1.jpg);
-     background-repeat: no-repeat;
-     background-size: 100%;
-     padding-top: 100px;
-     height: 100%;
 }
 
 #capabilities .box_second_of_type {
      background-image: url(../images/banner2.jpg);
-     background-repeat: no-repeat;
-     background-size: 100%;
-     padding-top: 100px;
-     height: 100%;
 }
 
 #capabilities .box_third_of_type {
      background-image: url(../images/team.jpg);
-     background-repeat: no-repeat;
-     background-size: 100%;
-     padding-top: 100px;
 }
 
-#capabilities .carousel-item>div {
-     padding: 7%;
+#capabilities .carousel-item .row {
+     position: relative;
+     z-index: 1;
+     padding: 5% 7%;
 }
 
-#capabilities .box>div {
-     width: 50%;
+#capabilities .carousel-item h2 {
+     font-size: 2.5rem;
+     font-weight: 600;
+     margin-bottom: 1rem;
+}
+
+#capabilities .carousel-item p {
+     font-size: 1.1rem;
+     max-width: 600px;
+     line-height: 1.6;
+}
+
+#capabilities .carousel-item span {
+     font-size: 0.85rem;
+     letter-spacing: 1px;
+     color: #f1f1f1;
+}
+
+#capabilities .carousel-control-prev-icon,
+#capabilities .carousel-control-next-icon {
+     background-color: rgba(0, 0, 0, 0.4);
+     border-radius: 50%;
+     padding: 12px;
+     background-size: 60% 60%;
+}
+
+#capabilities .carousel-control-prev,
+#capabilities .carousel-control-next {
+     width: 5%;
 }
 
 /* #clients {
