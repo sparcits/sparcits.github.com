@@ -1,60 +1,77 @@
 /*---------------------------------------------------------------------
-	File Name: custom.js
+  File Name: custom.js
 ---------------------------------------------------------------------*/
 
 $(function () {
 
-	"use strict";
+  "use strict";
 
-	/*===============================================================
-	  Preloader
-	===============================================================*/
+  /*===============================================================
+    Preloader
+  ===============================================================*/
 
-	setTimeout(function () {
-		$('.loader_bg').fadeToggle();
-	}, 1500);
+  setTimeout(function () {
+    $('.loader_bg').fadeToggle();
+  }, 1500);
 
-	/*===============================================================
-	  Load Header
-	===============================================================*/
-	$("#header-box").load("includes/header.html");
+  /*===============================================================
+    Load Header
+  ===============================================================*/
+  $("#header-box").load("includes/header.html");
 
-	/*===============================================================
-	  Load Footer
-	===============================================================*/
-	$("#footer-box").load("includes/footer.html");
+  /*===============================================================
+    Load Footer
+  ===============================================================*/
+  $("#footer-box").load("includes/footer.html");
 
-	/*===============================================================
-	  Toggle sidebar
-	===============================================================*/
-	$(document).ready(function () {
-		$('#sidebarCollapse').on('click', function () {
-			$('#sidebar').toggleClass('active');
-			$(this).toggleClass('active');
-		});
-	});
+  /*===============================================================
+    Toggle sidebar
+  ===============================================================*/
+  $(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+  });
 
-	/*===============================================================
-		Horizontal Scroll
-	===============================================================*/
-	//Selecting Elements
-	let sticky = document.querySelector('.journey-item');
-	let stickyParent = document.querySelector('.journey-container');
-	let scrollWidth = sticky.scrollWidth;
-	let verticalScrollHeight = stickyParent.getBoundingClientRect().height - sticky.getBoundingClientRect().height;
+  /*===============================================================
+    Horizontal Scroll
+  ===============================================================*/
+  //Selecting Elements
+  let sticky = document.querySelector('.journey-item');
+  let stickyParent = document.querySelector('.journey-container');
+  let scrollWidth = sticky.scrollWidth;
+  let verticalScrollHeight = stickyParent.getBoundingClientRect().height - sticky.getBoundingClientRect().height;
 
-	$(document).on('scroll', function () {
-		let stickyPosition = sticky.getBoundingClientRect().top;
-		/* console.log(stickyPosition) */
-		if (stickyPosition > 130) {
-			return;
-		} else {
-			let scrolled = stickyParent.getBoundingClientRect().top; //how much is scrolled?
-			sticky.scrollLeft = (scrollWidth / verticalScrollHeight) * (-scrolled) * 0.85;
-		}
-	});
+  $(document).on('scroll', function () {
+    let stickyPosition = sticky.getBoundingClientRect().top;
+    /* console.log(stickyPosition) */
+    if (stickyPosition > 130) {
+      return;
+    } else {
+      let scrolled = stickyParent.getBoundingClientRect().top; //how much is scrolled?
+      sticky.scrollLeft = (scrollWidth / verticalScrollHeight) * (-scrolled) * 0.85;
+    }
+  });
 
 });
+
+
+//KPI modal
+const kpiModal = document.getElementById('kpiModal');
+const kpiModalLabel = kpiModal.querySelector('.modal-title');
+const kpiModalBody = kpiModal.querySelector('.modal-body');
+
+kpiModal.addEventListener('show.bs.modal', event => {
+  const button = event.relatedTarget;
+  const title = button.getAttribute('data-title');
+  const content = button.getAttribute('data-content');
+
+  kpiModalLabel.textContent = title;
+  kpiModalBody.innerHTML = content; // Use innerHTML for HTML injection
+});
+
+
 
 // Select DOM elements
 const nextBtn = document.querySelector(".next");
@@ -105,9 +122,8 @@ afterSlideChange();
 function resetAnimation() {
   runningTimeBar.style.animation = "none"; // Remove current animation
   runningTimeBar.offsetHeight; // Trigger reflow to restart animation
-  runningTimeBar.style.animation = `runningTime ${
-    TIME_AUTO_NEXT / 1000
-  }s linear forwards`; // Restart animation
+  runningTimeBar.style.animation = `runningTime ${TIME_AUTO_NEXT / 1000
+    }s linear forwards`; // Restart animation
 }
 
 // Handles slider navigation (next/prev)

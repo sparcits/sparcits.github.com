@@ -18,6 +18,7 @@ Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
      src: local('VW Head Regular'), url('fonts/VWHeadRegular.woff') format('woff');
 }
 
+
 @font-face {
      font-family: 'VW Head Bold';
      font-style: normal;
@@ -43,10 +44,13 @@ Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 :root {
-     --dark-blue: #002733;
-     --black: #000;
      --text-color: #fff;
-     --vw-group: #6bfff4;
+     --vw-group: #c2fe06;
+     --dark-blue: #002733;
+     --black: #000000;
+     --teal: #005f73;
+     --medium-gray: #666666;
+     --light-gray: #e0e0e0;
      --sidenav-size: 150px;
      --left-position: 90%;
      --transition-time: 1.2s cubic-bezier(0.25, 1, 0.5, 1);
@@ -594,6 +598,9 @@ button {
 
 
 /* Capabilities */
+/* #capabilities {
+     padding-top: 100px;
+} */
 
 #capabilities .container-fluid {
      padding: 0 !important;
@@ -601,67 +608,43 @@ button {
 
 #capabilities .carousel-inner {
      height: 95vh;
-     background: #001F3F;
-     /* fallback for var(--dark-blue) */
-}
-
-#capabilities .carousel-item {
-     height: 95vh;
-     display: flex;
-     align-items: center;
-     background-size: cover;
-     background-position: center;
-     color: white;
-     position: relative;
+     background: var(--dark-blue);
 }
 
 #capabilities .box_first_of_type {
      background-image: url(../images/banner1.jpg);
+     background-repeat: no-repeat;
+     background-size: 100%;
+     padding-top: 100px;
+     height: 100%;
 }
 
 #capabilities .box_second_of_type {
      background-image: url(../images/banner2.jpg);
+     background-repeat: no-repeat;
+     background-size: 100%;
+     padding-top: 100px;
+     height: 100%;
 }
 
 #capabilities .box_third_of_type {
      background-image: url(../images/team.jpg);
+     background-repeat: no-repeat;
+     background-size: 100%;
+     padding-top: 100px;
 }
 
-#capabilities .carousel-item .row {
-     position: relative;
-     z-index: 1;
-     padding: 5% 7%;
+#capabilities .carousel-item>div {
+     padding: 7%;
 }
 
-#capabilities .carousel-item h2 {
-     font-size: 2.5rem;
-     font-weight: 600;
-     margin-bottom: 1rem;
+#capabilities .box>div {
+     width: 50%;
 }
 
-#capabilities .carousel-item p {
-     font-size: 1.1rem;
-     max-width: 600px;
-     line-height: 1.6;
-}
-
-#capabilities .carousel-item span {
-     font-size: 0.85rem;
-     letter-spacing: 1px;
-     color: #f1f1f1;
-}
-
-#capabilities .carousel-control-prev-icon,
-#capabilities .carousel-control-next-icon {
-     background-color: rgba(0, 0, 0, 0.4);
-     border-radius: 50%;
-     padding: 12px;
-     background-size: 60% 60%;
-}
-
-#capabilities .carousel-control-prev,
-#capabilities .carousel-control-next {
-     width: 5%;
+#capabilities .carousel-control-next,
+.carousel-control-prev {
+     width: 3%;
 }
 
 /* #clients {
@@ -758,108 +741,120 @@ button {
 }
 
 
-#team-achievements h2 {
-     padding-top: 5%;
-     padding-bottom: 5%;
-}
 
-
+/* Team Achievements */
 #team-achievements {
-     .box {
-          height: 250px;
-
-          .detail {
-               height: 100%;
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               padding: 10%;
-
-               h3 {
-                    font-size: 1.5rem;
-                    background-color: rgba(0, 0, 0, 0.3);
-                    padding: 20px;
-               }
-
-               p {
-                    font-size: 1.5rem;
-                    background-color: rgba(0, 0, 0, 0.3);
-                    padding: 20px;
-               }
-          }
-
-
-     }
+     background-color: var(--dark-blue);
 }
 
-#team-achievements {
-     .box-container .row .col-3:nth-of-type(1) .box {
-          background-image: url(../images/start.jpg);
-          background-size: cover;
-     }
-
-     .box-container .row .col-3:nth-of-type(2) .box {
-          background-image: url(../images/engagement.jpg);
-          background-size: cover;
-     }
-
-     .box-container .row .col-3:nth-of-type(3) .box {
-          background-image: url(../images/resources.jpg);
-          background-size: cover;
-     }
-
-     .box-container .row .col-3:nth-of-type(4) .box {
-          background-image: url(../images/project-delivered.jpg);
-          background-size: cover;
-     }
-
-     .box-container .row .col-3:nth-of-type(5) .box {
-          background-image: url(../images/growth.jpg);
-          background-size: cover;
-          margin-top: 50px;
-     }
-
-     .box-container .row .col-3:nth-of-type(6) .box {
-          background-image: url(../images/implement.jpg);
-          background-size: cover;
-          margin-top: 50px;
-     }
-
-     .box-container .row .col-3:nth-of-type(7) .box {
-          background-image: url(../images/certification.jpg);
-          background-size: cover;
-          margin-top: 50px;
-     }
-
-     .box-container .row .col-3:nth-of-type(8) .box {
-          background-image: url(../images/CSAT-rating.jpg);
-          background-size: cover;
-          margin-top: 50px;
-     }
+.text-vw {
+     color: var(--text-color);
 }
 
-#team-achievements .box>.image {
-     padding: 0 4%;
-     background: rgba(0, 184, 172, 0.3);
-     border-top-left-radius: .7rem;
-     border-bottom-left-radius: .7rem;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+.kpi-card {
+     position: relative;
+     height: 220px;
+     border-radius: 1rem;
+     overflow: hidden;
+     background-size: cover;
+     background-position: center;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* #team-achievements .box>.detail {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     padding: 5%;
-} */
-
-#team-achievements .box>.image>img {
-     border-radius: .2rem;
-     max-width: 4rem;
+.kpi-card:hover {
+     transform: scale(1.03);
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(194, 254, 6, 0.3);
 }
 
+.kpi-overlay {
+     position: absolute;
+     bottom: 0;
+     background: rgba(0, 0, 0, 0.6);
+     width: 100%;
+     padding: 1rem;
+}
+
+.kpi-value {
+     font-size: 1.8rem;
+     font-weight: 100;
+     color: var(--text-color);
+     margin-bottom: 0.25rem;
+}
+
+.kpi-label {
+     font-size: 1rem;
+     color: var(--text-color);
+     margin: 0;
+}
+
+.bg-1 {
+     background-image: url('../images/start.jpg');
+}
+
+.bg-2 {
+     background-image: url('../images/engagement.jpg');
+}
+
+.bg-3 {
+     background-image: url('../images/resources.jpg');
+}
+
+.bg-4 {
+     background-image: url('../images/project-delivered.jpg');
+}
+
+.bg-5 {
+     background-image: url('../images/growth.jpg');
+}
+
+.bg-6 {
+     background-image: url('../images/implement.jpg');
+}
+
+.bg-7 {
+     background-image: url('../images/certification.jpg');
+}
+
+.bg-8 {
+     background-image: url('../images/CSAT-rating.jpg');
+}
+
+.custom-modal {
+     background-color: var(--dark-blue);
+     color: var(--white);
+     border-radius: 14px;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+     border: 1px solid rgba(194, 254, 6, 0.25);
+     overflow: hidden;
+}
+
+.custom-modal .modal-header {
+     background: rgba(0, 0, 0, 0.2);
+     padding: 1rem 1.5rem;
+}
+
+.custom-modal .modal-title {
+     color: var(--lime-green);
+     font-size: 1.5rem;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+}
+
+.custom-modal .modal-body {
+     font-size: 1rem;
+     padding: 1.5rem;
+     color: var(--white);
+}
+
+.custom-modal .btn-close {
+     filter: invert(1);
+     opacity: 0.8;
+}
+
+.custom-modal .btn-close:hover {
+     opacity: 1;
+}
 
 /* #team-achievements .box h2 {
      font-size: 1.5rem;
