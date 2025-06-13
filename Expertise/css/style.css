@@ -44,11 +44,15 @@ Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 :root {
-     --dark-blue: #002733;
-     --black: #000;
-     --text-color: #fff;
-     --vw-group: #c2fe06;
+     --text-color: #edf2f7;
+     --dark-bg: #080d0e;
+     --card-bg: #131d20;
+     --text-muted: #616160;
+     --border-color: rgba(255, 255, 255, 0.1);
+     --icon-bg: #c2fe06;
      --sidenav-size: 150px;
+     --left-position: 90%;
+     --transition-time: 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 * {
@@ -61,7 +65,7 @@ html {
 
 body {
      color: var(--text-color);
-     background-color: var(--dark-blue);
+     background-color: var(--dark-bg);
      font-size: 1rem;
      font-family: 'VW Head Regular', 'VW Text Regular';
      line-height: 1.80857;
@@ -332,19 +336,22 @@ button {
 /* End Header Area */
 
 /* Sidenav */
-#subnav{
+#subnav {
      background: rgba(255, 255, 255, .25);
-     .subnav{
-          .col-12{
+
+     .subnav {
+          .col-12 {
                display: flex;
                justify-content: flex-end;
-               .nav-item{
+
+               .nav-item {
                     padding: 10px;
                     cursor: pointer;
-                    a{
+
+                    a {
                          color: #fff;
                     }
-                    
+
                }
           }
      }
@@ -374,7 +381,8 @@ button {
 
 #services-hero {
      padding-top: 50px;
-     h1{
+
+     h1 {
           font-size: 3rem;
      }
 }
@@ -498,15 +506,100 @@ button {
 #services-hero .capabiliyList {
      padding-bottom: 6%;
 
-     li {
+     /* li {
           padding: 0.5rem;
           margin-bottom: 1rem;
+     } */
+
+     .capabilityItem {
+          border: 1px solid rgba(255, 255, 255, 0.1);
      }
 
      button {
-          background: none;
-          color: #616160;
+          background: var(--dark-bg);
+          box-shadow: none;
+          color: var(--text-color);
           font-size: 2rem;
+
+     }
+
+     .collapsed {
+          color: var(--text-muted);
+     }
+
+     .accordion-button::after {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23c2fe06' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+     }
+
+
+     .accordion-button:not(.collapsed)::after {
+          color: var(--text-color);
+     }
+}
+
+#services-hero .capabiliyListContent {
+     .layout-4col {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 1.5rem;
+          align-items: start;
+     }
+     .layout-5col{
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 1rem;
+     }
+     .covergae-box {
+          .card {
+               background-color: var(--card-bg);
+               color: var(--text-color);
+               border-radius: 0.75rem;
+               padding: 1.5rem;
+               border: 1px solid var(--border-color);
+               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+               transition: transform 0.2s ease;
+
+               p {
+                    font-size: 10px;
+               }
+
+               .icon {
+                    background-color: var(--icon-bg);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    i {
+                         color: var(--dark-bg);
+                    }
+               }
+
+               .sub-card {
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: 1px solid var(--border-color, #2a2a2a);
+                    border-radius: 0.5rem;
+                    transition: background 0.3s ease, transform 0.2s ease;
+
+                    small {
+                         font-size: .7rem;
+                    }
+               }
+
+               .sub-card:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    transform: scale(1.02);
+               }
+
+          }
+
+          .card:hover {
+               transform: translateY(-4px);
+          }
+
+          .card h5 {
+               font-size: .8rem;
+          }
      }
 }
 
@@ -516,8 +609,8 @@ button {
 
 /* Service Logo */
 
-#services-logo{
-     h2{
+#services-logo {
+     h2 {
           font-size: 3rem;
      }
 }
@@ -526,7 +619,7 @@ button {
      display: flex;
      justify-content: center;
      align-items: center;
-     
+
      img {
           max-width: 200px;
           padding: 5%;
@@ -544,15 +637,17 @@ button {
      height: 90vh;
      position: sticky;
      top: 0;
-     h2{
+
+     h2 {
           font-size: 5rem;
           text-align: center;
      }
 }
 
-#service-highlights .highlight-section{
+#service-highlights .highlight-section {
      padding-bottom: 90vh;
-     .highlight-box{
+
+     .highlight-box {
           background-image: url(../images/transformation.jpg);
           background-size: cover;
           position: relative;
@@ -560,14 +655,17 @@ button {
           padding: 7%;
           margin-top: 5%;
      }
-     .highlight-box:nth-child(2){
+
+     .highlight-box:nth-child(2) {
           background-image: url(../images/digital.jpg);
           margin-left: 50%;
      }
-     .highlight-box:nth-child(3){
+
+     .highlight-box:nth-child(3) {
           background-image: url(../images/data-analysis.jpg);
      }
-     .highlight-box:nth-child(4){
+
+     .highlight-box:nth-child(4) {
           background-image: url(../images/business-advisory.jpg);
           margin-left: 50%;
      }

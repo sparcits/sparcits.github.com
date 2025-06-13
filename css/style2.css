@@ -44,13 +44,12 @@ Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 :root {
-     --text-color: #fff;
-     --vw-group: #c2fe06;
-     --dark-blue: #002733;
-     --black: #000000;
-     --teal: #005f73;
-     --medium-gray: #666666;
-     --light-gray: #e0e0e0;
+     --text-color: #edf2f7;
+     --dark-bg: #080d0e;
+     --card-bg: #131d20;
+     --text-muted: #616160;
+     --border-color: rgba(255, 255, 255, 0.1);
+     --icon-bg: #c2fe06;
      --sidenav-size: 150px;
      --left-position: 90%;
      --transition-time: 1.2s cubic-bezier(0.25, 1, 0.5, 1);
@@ -66,7 +65,7 @@ html {
 
 body {
      color: var(--text-color);
-     background-color: var(--dark-blue);
+     background-color: var(--dark-bg);
      font-size: 1rem;
      font-family: 'VW Head Regular', 'VW Text Regular';
      line-height: 1.80857;
@@ -282,7 +281,7 @@ button {
      padding: 30px 30px;
      position: fixed;
      z-index: 999;
-     background: var(--dark-blue);
+     background: var(--dark-bg);
      border-bottom: 1px solid rgba(0, 184, 172, .2);
 }
 
@@ -342,7 +341,7 @@ button {
      position: fixed;
      min-height: 100vh;
      transition: all 0.25s ease-out;
-     background: var(--dark-blue);
+     background: var(--dark-bg);
      width: var(--sidenav-size);
      z-index: 10;
      display: flex;
@@ -608,7 +607,7 @@ button {
 
 #capabilities .carousel-inner {
      height: 95vh;
-     background: var(--dark-blue);
+     background: var(--dark-bg);
 }
 
 #capabilities .box_first_of_type {
@@ -744,7 +743,7 @@ button {
 
 /* Team Achievements */
 #team-achievements {
-     background-color: var(--dark-blue);
+     background-color: var(--dark-bg);
 }
 
 .text-vw {
@@ -821,7 +820,7 @@ button {
 }
 
 .custom-modal {
-     background-color: var(--dark-blue);
+     background-color: var(--dark-bg);
      color: var(--white);
      border-radius: 14px;
      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
@@ -1241,7 +1240,7 @@ button {
 }
 
 #services-hero .icon {
-     background: var(--dark-blue);
+     background: var(--dark-bg);
      width: 40px;
      height: 40px;
      border-radius: 50%;
@@ -1327,7 +1326,7 @@ button {
 /* Success Stories */
 #success-stories-hero .carousel-inner {
      height: 80vh;
-     background: var(--dark-blue);
+     background: var(--dark-bg);
 }
 
 #success-stories-hero .container-fluid {
@@ -1501,12 +1500,12 @@ button {
 }
 
 #vw-grp-china-hero .container .row .details {
-     background: var(--dark-blue);
+     background: var(--dark-bg);
      padding: 5%;
 }
 
 #vw-grp-china-hero .about {
-     background: var(--dark-blue);
+     background: var(--dark-bg);
      padding: 5%;
 }
 

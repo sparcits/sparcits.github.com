@@ -68,109 +68,884 @@
             </div>
          </div>
          <div class="row">
-            <div class="col-md-6">
-               <ul class="nav capabiliyList my-5 flex-column" id="capabiliyList" role="tablist">
-                  <li>
-                     <button class="active h1" id="pills-finance-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-finance" aria-controls="pills-finance"
-                        aria-selected="true">Finance</button>
-                  </li>
-                  <li>
-                     <button class="h1" id="pills-sales-tab" data-bs-toggle="pill" data-bs-target="#pills-sales"
-                        aria-controls="pills-sales" aria-selected="false">Sales</button>
-                  </li>
-                  <li>
-                     <button class="h1" id="pills-procurement-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-procurement" aria-controls="pills-procurement"
-                        aria-selected="false">Procurement</button>
-                  </li>
-                  <li>
-                     <button class="h1" id="pills-supply-chain-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-supply-chain" aria-controls="pills-supply-chain"
-                        aria-selected="false">Supply Chain</button>
-                  </li>
-                  <li>
-                     <button class="h1" id="pills-manufacturing-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-manufacturing" aria-controls="pills-manufacturing"
-                        aria-selected="false">Manufacturing</button>
-                  </li>
-                  <li>
-                     <button class="h1" id="pills-basis-tab" data-bs-toggle="pill" data-bs-target="#pills-basis"
-                        aria-controls="pills-basis" aria-selected="false">Basis & Security</button>
-                  </li>
-                  <li>
-                     <button class="h1" id="pills-abap-tab" data-bs-toggle="pill" data-bs-target="#pills-abap"
-                        aria-controls="pills-abap" aria-selected="false">ABAP & Integration</button>
-                  </li>
-                  <li>
-                     <button class="h1" id="pills-btp-tab" data-bs-toggle="pill" data-bs-target="#pills-btp"
-                        aria-controls="pills-btp" aria-selected="false">BTP & Cloud</button>
-                  </li>
-               </ul>
-            </div>
-            <div class="col-md-6 position-sticky top-60 h-fit">
-               <div class="position-sticky">
-                  <div class="container">
-                     <div class="tab-content mt-5 w-100" id="capabiliyListContent">
-                        <div class="tab-pane fade show active" id="pills-finance" role="tabpanel"
-                           aria-labelledby="pills-finance-tab">
-                           <div class="finance-box">
-                              <!-- <div class="icon"><img src="./images/finance.svg" alt=""></div> -->
-                              <h3><b>Finance</b></h3>
-                              <p>Our team brings deep expertise in the finance domain, helping clients navigate complex financial landscapes through tailored SAP solutions. From designing robust financial architectures to implementing modules like SAP FI, CO, and Central Finance, our experts enable seamless integration, accurate reporting, and real-time visibility into financial data. We support end-to-end processes including budgeting, forecasting, compliance, and cost control—ensuring our clients achieve financial transparency, operational efficiency, and strategic growth.</p>
-                              <img class="mt-3" src="./images/finance-graphic.png" style="width: 80%;" alt="">
+            <!-- sales -->
+            <div class="accordion capabiliyList mt-5" id="capabiliyList">
+               <div class="capabilityItem">
+                  <h2 class="accordion-header" id="finance-header">
+                     <button class="accordion-button h2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFinance" aria-expanded="true" aria-controls="collapseFinance"><i
+                           class="bi bi-cash-stack me-2"></i>&nbsp;
+                        Finance
+                     </button>
+                  </h2>
+                  <div id="collapseFinance" class="accordion-collapse collapse show" aria-labelledby="Finance"
+                     data-bs-parent="#capabiliyList">
+                     <div class="accordion-body capabiliyListContent">
+                        <div class="covergae-box layout-5col">
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-briefcase"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Finance</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">General Ledger with New GL</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Forex. valuation</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Document Splitting
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Financial Group Reporting</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Account Payable with payment using DME
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Accounts Receivable
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Banking
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Petty Cash Journal
+                                       </small>
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-box-seam"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Asset Management</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Asset Under Construction</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Asset Class</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Asset Acquisition</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Sale of Asset</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Asset Scarping</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Depreciation Area</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Asset Depreciation</small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-sliders"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Controlling</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Cost Center Accounting</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Product Costing</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Profitability Analysis
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Internal Order Accounting</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Profit Center Accounting
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Interface with Profis
+                                       </small>
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-cash-stack"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Cash & Liquidity Management</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Liquidity Planning/Optimization</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Cash Position Management</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Cash Flow Forecasting</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Bank Account Management</small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-bar-chart"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">IMPS</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Project creation & monitoring</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Reporting</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Planning & Budgeting</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Actual cost and revenue</small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Sales -->
+               <div class="capabilityItem">
+                  <h2 class="accordion-header" id="sales-header">
+                     <button class="accordion-button h2 collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSales" aria-expanded="false" aria-controls="collapseSales">
+                        <i class="bi bi-cart3"></i>&nbsp;
+                        Sales
+                     </button>
+                  </h2>
+                  <div id="collapseSales" class="accordion-collapse collapse" aria-labelledby="Sales"
+                     data-bs-parent="#capabiliyList">
+                     <div class="accordion-body capabiliyListContent">
+                        <div class="covergae-box layout-4col">
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-file-earmark-text"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Sales Order Processing</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Domestic Sales Order Processing</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Export Sales Order Processing</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Daily Order
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Intercompany Sales</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Emergency Order
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Stock Order
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Staff Order –Cash Sales
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Credit Management
+                                       </small>
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-box-seam"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Picking</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Order Release</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Integration with WM/EWM</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Picking</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Packing & Loading</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Post Goods Issue</small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-arrow-counterclockwise"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Complaints & Return, Warranty Processing</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Parts Sales Return</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Parts Return (Exchange Parts)</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Auto Part Return
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Parts Return (Exchange Parts)</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Warranty Management
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Recall Management
+                                       </small>
+                                    </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-receipt"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Billing</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Sales Invoice</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Credit Invoice</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Integration with 3rd Party</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Reporting </small>
+                                    </div>
+                                 </div>
+                              </div>
                            </div>
                         </div>
-                        <div class="tab-pane fade" id="pills-sales" role="tabpanel" aria-labelledby="pills-sales-tab">
+                     </div>
+                  </div>
+               </div>
+               <!-- Procurement -->
+               <div class="capabilityItem">
+                  <h2 class="accordion-header" id="procurement-header">
+                     <button class="accordion-button h2 collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseProcurement" aria-expanded="false" aria-controls="collapseProcurement">
+                        <i class="bi bi-bag-check"></i>&nbsp;
+                        Procurement
+                     </button>
+                  </h2>
+                  <div id="collapseProcurement" class="accordion-collapse collapse" aria-labelledby="Procurement"
+                     data-bs-parent="#capabiliyList">
+                     <div class="accordion-body capabiliyListContent">
+                        <div class="covergae-box layout-4col">
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-bag-check"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Procurement Processes</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Standard Procure to Pay</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Subcontracting Process</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Consignment Process
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Stock Transfer Order Process</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Service Procurement
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Third Party Procurement Process
+                                       </small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-box-seam"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Inventory Management</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Goods Receipt</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Goods Issue</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Transfer Posting</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Physical Inventory</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Scrap</small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-cash-stack"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Valuation & Account Assign.</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Account Determination Process</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Material Price Change</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Materials Valuation Type
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Spilt Valuation</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Pricing Procedure
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Flexible Workflow
+                                       </small>
+                                    </div>
+                                 </div>
+                              </div>
 
-                           <h2>Sales</h2>
-                           <p>Our team brings strong expertise in SAP Sales and Distribution (SD) along with CRM platforms like Salesforce, enabling end-to-end visibility and control across the entire customer journey. We design and implement solutions that streamline order-to-cash processes—covering sales order management, pricing, billing, and logistics—while also integrating seamlessly with CRM systems to enhance lead management, customer engagement, and sales performance tracking. By combining transactional efficiency with customer-centric insights, we empower businesses to deliver personalized experiences, improve response times, and drive sustainable revenue growth.</p>
-                           <img class="mt-3" src="./images/sales-graphics.png" style="width: 80%;" alt="">
-
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-receipt"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Invoice Verification</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Scan Invoice(IRIS/VIM)</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Invoice Approval</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Park & Poet Invoice</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Variances & Blocking Reasons </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Released Block Invoices</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Blocked Invoice</small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                        <div class="tab-pane fade" id="pills-procurement" role="tabpanel"
-                           aria-labelledby="pills-procurement-tab">
+                     </div>
+                  </div>
+               </div>
+               <!-- Supply Chain -->
+               <div class="capabilityItem">
+                  <h2 class="accordion-header" id="scm-header">
+                     <button class="accordion-button h2 collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSCM" aria-expanded="false" aria-controls="collapseSCM">
+                        <i class="bi bi-diagram-3"></i>&nbsp;
+                        Supply Chain
+                     </button>
+                  </h2>
+                  <div id="collapseSCM" class="accordion-collapse collapse" aria-labelledby="SCM"
+                     data-bs-parent="#capabiliyList">
+                     <div class="accordion-body capabiliyListContent">
+                        <div class="covergae-box layout-5col">
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-box-seam"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Inventory</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Core Inventory Management</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Return to Vendor</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Return to Supplier</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Physical Inventory</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Quality Management in Procurement</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Quality Management in Sales</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Quality Management in Stock Handling</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Subcontracting</small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-truck"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">Transport Management</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Inbound Road Freight</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Inbound Air Freight</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Inbound Ocean Freight
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Outbound Road freight</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Outbound Air & Ocean freight
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Dangerous Goods Handling
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Customs Handling
+                                       </small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-cash-stack"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">VMS</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Model Master</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Model Master Configuration</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Pricing
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Vehicle Warranty</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Fleet Management
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Vehicle Subcontracting
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Company Car RDA
+                                       </small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Tactical Schemes
+                                       </small>
+                                    </div>
+                                 </div>
+                              </div>
 
-                           <h2>Procurement</h2>
-                           <p>Our team offers deep expertise in procurement processes, delivering robust solutions through SAP MM, Ariba, and other integrated platforms to optimize sourcing, purchasing, and supplier collaboration. We help organizations streamline the procure-to-pay cycle, enforce compliance, manage vendor relationships, and gain real-time visibility into spend. With a strong focus on automation, cost control, and strategic sourcing, our procurement solutions drive operational efficiency and enable smarter, data-driven purchasing decisions that support long-term business goals.</p>
-                           <img class="mt-3" src="./images/finance-graphic.png" style="width: 80%;" alt="">
-
-                        </div>
-                        <div class="tab-pane fade" id="pills-supply-chain" role="tabpanel"
-                           aria-labelledby="pills-supply-chain-tab">
-
-                           <h2>Supply Chain</h2>
-                           <p>Our team brings end-to-end expertise in supply chain management, leveraging SAP solutions like SAP S/4HANA, IBP, and EWM to optimize planning, execution, and logistics across the value chain. We help businesses enhance demand forecasting, inventory visibility, warehouse efficiency, and supplier coordination—enabling agile, resilient, and data-driven supply chain operations. From production planning to last-mile delivery, our solutions are designed to reduce costs, improve service levels, and adapt to dynamic market demands with speed and precision.</p>
-                           <img class="mt-3" src="./images/finance-graphic.png" style="width: 80%;" alt="">
-
-                        </div>
-                        <div class="tab-pane fade" id="pills-manufacturing" role="tabpanel"
-                           aria-labelledby="pills-manufacturing-tab">
-
-                           <h2>Manufacturing</h2>
-                           <p>Our team specializes in delivering smart, integrated manufacturing solutions using SAP platforms like S/4HANA, PP (Production Planning), and Digital Manufacturing Cloud. We support discrete and process manufacturing with capabilities spanning production planning, shop floor control, material requirements planning (MRP), and quality management. By aligning real-time data with operational execution, we enable improved production efficiency, reduced downtime, and greater agility. Our solutions empower manufacturers to streamline operations, ensure product consistency, and adapt quickly to changing demand and supply dynamics.</p>
-                           <img class="mt-3" src="./images/finance-graphic.png" style="width: 80%;" alt="">
-
-                        </div>
-                        <div class="tab-pane fade" id="pills-basis" role="tabpanel" aria-labelledby="pills-basis-tab">
-
-                           <h2>Basis & Security</h2>
-                           <p>Our team offers strong capabilities in SAP Basis and Security, ensuring a stable, high-performing, and secure system landscape. We handle end-to-end system administration—including installation, upgrades, performance tuning, and transport management—across on-premise and cloud environments. On the security front, we specialize in user access management, role design, GRC integration, and audit compliance to safeguard critical business data. With a focus on system reliability and risk mitigation, we help organizations maintain a secure, compliant, and scalable SAP ecosystem.</p>
-                           <img class="mt-3" src="./images/finance-graphic.png" style="width: 80%;" alt="">
-
-                        </div>
-                        <div class="tab-pane fade" id="pills-abap" role="tabpanel" aria-labelledby="pills-abap-tab">
-
-                           <h2>Abap & Integration</h2>
-                           <p>Our team excels in SAP ABAP development and integration, building scalable, high-performance custom solutions that extend standard SAP functionality. From classical reports and enhancements to modern RAP-based Fiori apps, we craft tailored developments that align with business needs. On the integration front, we leverage SAP PI/PO, Cloud Integration (CPI), and APIs to enable seamless data exchange across SAP and non-SAP systems. Our focus on clean code, performance optimization, and secure connectivity ensures robust, future-ready solutions that drive efficiency and agility across the enterprise.</p>
-                           <img class="mt-3" src="./images/finance-graphic.png" style="width: 80%;" alt="">
-
-                        </div>
-                        <div class="tab-pane fade" id="pills-btp" role="tabpanel" aria-labelledby="pills-btp-tab">
-
-                           <h2>BTP & Cloud</h2>
-                           <p>Our team brings deep expertise in SAP Business Technology Platform (BTP) and cloud-native development, enabling businesses to innovate, extend, and integrate their SAP landscapes with agility. We build and deploy scalable applications using BTP services like CAP, Fiori Elements, Workflow Management, and Integration Suite—bridging core systems with modern, cloud-based solutions. From side-by-side extensions to event-driven architectures and API-first integrations, we help clients unlock new value, accelerate digital transformation, and stay future-ready in a rapidly evolving cloud ecosystem.</p>
-                           <img class="mt-3" src="./images/finance-graphic.png" style="width: 80%;" alt="">
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-receipt"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">RPM</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Packaging Planning</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Inventory</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Packaging</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Scrapping</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Internal Process</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Cleaning process</small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card p-3 h-100">
+                              <div class="d-flex align-items-center justify-content-right mb-3">
+                                 <div class="icon text-primary fs-4">
+                                    <i class="bi bi-receipt"></i>
+                                 </div>
+                                 <div class="ms-2">
+                                    <h5 class="mb-0 pb-0">IBP</h5>
+                                    <p>Small description</p>
+                                 </div>
+                              </div>
+                              <div class="row g-2 mt-2">
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Demand Planning</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Supply Chain Risk Management</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Shelf life planning</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <div class="sub-card text-center">
+                                       <small class="text-white">Supply & Allocation Planning</small>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -280,7 +1055,7 @@
    <!-- <section id="highlights">
       <div class="container">
          <div class="row mb-5">
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                <h2 class="h1">Key Highlights</h2>
                <p class="pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel obcaecati perferendis
                   eveniet ea impedit! Odit, praesentium distinctio eaque, alias similique aliquam voluptas incidunt
