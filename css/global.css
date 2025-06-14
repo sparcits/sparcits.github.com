@@ -1,0 +1,142 @@
+/* ===========================================================
+Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
+=============================================================*/
+@font-face {
+     font-family: 'VW Head Regular';
+     font-style: normal;
+     font-weight: normal;
+     src: local('VW Head Regular'), url('fonts/VWHeadRegular.woff') format('woff');
+}
+
+
+@font-face {
+     font-family: 'VW Head Bold';
+     font-style: normal;
+     font-weight: normal;
+     src: local('VW Head Bold'), url('fonts/VWHeadBold.woff') format('woff');
+}
+
+
+@font-face {
+     font-family: 'VW Text Regular';
+     font-style: normal;
+     font-weight: normal;
+     src: local('VW Text Regular'), url('fonts/VWTextRegular.woff') format('woff');
+}
+
+
+@font-face {
+     font-family: 'VW Text Bold';
+     font-style: normal;
+     font-weight: normal;
+     src: local('VW Text Bold'), url('fonts/VWTextBold.woff') format('woff');
+}
+
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+:root {
+     --text-color: #edf2f7;
+     --dark-bg: #080d0e;
+     --card-bg: #131d20;
+     --text-muted: #464a4a;
+     --border-color: rgba(255, 255, 255, 0.1);
+     --icon-bg: #c2fe06;
+     --teal: #008C82;
+     --sidenav-size: 150px;
+     --left-position: 90%;
+     --transition-time: 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+     box-sizing: border-box !important;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+     color: var(--text-color);
+     background-color: var(--dark-bg);
+     font-size: 1rem;
+     font-family: 'VW Head Regular', 'VW Text Regular';
+     line-height: 1.80857;
+     font-weight: normal;
+     min-height: 100vh;
+}
+a{
+     color: var(--text-color);
+     text-decoration: none;
+}
+a:hover{
+     color: var(--icon-bg);
+}
+button {
+     border: 0;
+     margin: 0;
+     padding: 0;
+     cursor: pointer;
+}
+
+ul,
+li,
+ol {
+     margin: 0px;
+     padding: 0px;
+     list-style: none;
+}
+
+
+img {
+     max-width: 100%;
+     height: auto;
+}
+
+
+/* Preloader */
+
+#preloader {
+     position: fixed;
+     z-index: 9999999;
+     background: var(--dark-bg);
+     width: 100%;
+     height: 100%;
+}
+
+#preloader .loader {
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+
+/* Header */
+.navbar {
+     background-color: var(--dark-bg);
+     border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+     color: var(--text-color);
+     transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+     color: var(--icon-bg);
+}
+
+.navbar-toggler {
+     border-color: var(--border-color);
+}
+
+/* End Header Area */
+
+/* Footer */
+#footer {
+     background-color: #000000;
+}
