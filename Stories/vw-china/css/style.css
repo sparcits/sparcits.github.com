@@ -1,13 +1,28 @@
-#vw-grp-china-hero .container .row .details {
-     padding: 5%;
+/* Subnav */
+.subnav-sticky {
+     position: sticky;
+     top: 0px;
+     z-index: 1020;
+     background-color: var(--text-muted);
+     border-bottom: 1px solid var(--border-color);
 }
 
-#vw-grp-china-hero .about {
-     background: var(--dark-blue);
-     padding: 5%;
+
+#vw-grp-china-hero .container .row {
+     .details {
+          padding: 5%;
+
+          p {
+               color: var(--text-light);
+          }
+     }
+
 }
 
 #vw-grp-china-about {
+
+     padding: 6rem 1rem;
+
      h2 {
           font-size: 3rem;
           margin-bottom: 2rem;
@@ -29,48 +44,69 @@
      }
 }
 
-#story-hero {
-     background-image: linear-gradient(270deg, #2bded3, transparent);
-     padding-top: 100px;
-}
+#module-coverage {
+     background: var(--card-bg);
+     padding: 4rem 0;
 
-#story-hero .row {
-     padding: 7%;
-}
-
-#story-intro {
-     padding-top: 10%;
-     padding-bottom: 8%;
-}
-
-#story-intro .details__container {
-     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-     border-radius: 20px;
-}
-
-#story-intro .list {
-     padding-inline-start: 1.5em;
-     font-weight: 400;
-
-     ::marker {
-          content: "*";
-          color: #2bded3;
+     .module-card {
+          i {
+               font-size: 2rem;
+          }
      }
 }
 
-#story-intro .list>li {
-     position: relative;
-     padding-inline-start: 0.5em;
-     padding-top: 1.5em;
-     border-bottom: 1px solid #48b2;
-     cursor: default;
-     transition: color 0.4s;
+/* Key benefits and challenges */
+#benefits-challenges {
+     padding: 6rem 0;
+}
 
-     &:hover {
-          color: #2bded3;
+#key-highlights {
+     background: var(--card-bg);
+     padding: 4rem 0;
 
-          &::marker {
-               font-weight: 700;
+     .highlight-item {
+          i {
+               font-size: 2rem;
           }
+     }
+}
+
+
+#project-roadmap {
+     padding: 6rem 1rem;
+     color: var(--text-color);
+     position: relative;
+
+     .roadmap-timeline {
+          position: relative;
+          padding-bottom: 2rem;
+     }
+
+     .timeline-line {
+          position: absolute;
+          top: 3.5rem;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background-color: var(--border-color);
+          z-index: 1;
+     }
+
+     .roadmap-step {
+          position: relative;
+          z-index: 2;
+     }
+
+     .roadmap-icon {
+          width: 50px;
+          height: 50px;
+          border: 1px solid var(--icon-bg);
+          color: var(--text-color);
+          border-radius: 50%;
+          line-height: 50px;
+          font-weight: bold;
+          margin: 0 auto;
+          z-index: 2;
+          box-shadow: 0 0 0 4px var(--dark-bg);
      }
 }
