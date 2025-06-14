@@ -388,26 +388,6 @@
           height: auto;
      }
 
-     circle {
-          stroke: white;
-          stroke-width: 1;
-          animation: blink 1.5s infinite;
-          cursor: pointer;
-     }
-
-     @keyframes blink {
-
-          0%,
-          100% {
-               opacity: 1;
-               r: 10;
-          }
-
-          50% {
-               opacity: 0.4;
-               r: 14;
-          }
-     }
 
      .flag-grid {
           display: flex;
