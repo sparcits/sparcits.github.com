@@ -1,56 +1,47 @@
 /*===============================================================
   map
 ===============================================================*/
-var projects = {
-    "ind": [
-        "India",
+var countryData = {
+
+    "India": [
         "VWIPL S/4 HANA Migration",
         "VWIPL AMS",
         "ET2000 NSC",
         "One-SAP Implementation"
     ],
-    "chn": [
-        "China",
+    "China": [
         "VCIC S/4 HANA Migration",
         "VGC S/4 HANA Migration",
         "ET2000 VGIC",
         "Anhui S/4HANA Implementation"
     ],
-    "sau": [
-        "Saudi Arabia",
+    "Saudi Arabia": [
         "SAP HCM  Development, VDMS",
         "Rollout",
         "VGME S/4HANA Implementation"
     ],
-    "rus": [
-        "Russia",
+    "Russia": [
         "K-SRM Rollout, MAN Power"
     ],
-    "aus": [
-        "Australia",
+    "Australia": [
         "AIMS S/4HANA Implementation"
     ],
-    "swe": [
-        "Sweden",
+    "Sweden": [
         "SPC AMS , SCANIA AMS",
         "Scania S/4HANA Implementation"
     ],
-    "esp": [
-        "Spain",
+    "Spain": [
         "SAP K-SRM rollout",
         "SAPHCM",
         "SCANIA AMS"
     ],
-    "gbr": [
-        "United Kingdom",
+    "United Kingdom": [
         "Bentley Motors"
     ],
-    "bel": [
-        "Belgium",
+    "Belgium": [
         "SCANIA AMS"
     ],
-    "deu": [
-        "Germany",
+    "Germany": [
         "GPS AMS",
         "GPS Projects",
         "K-SRM Projects",
@@ -65,45 +56,44 @@ var projects = {
         "MAN S/4HANA Conversion",
         "CARIAD AMS"
     ],
-    "usa": [
-        "United States",
+    "United States": [
         "SAP K-SRM Rollout",
         "SCOUT S/4 Implementation"
     ],
-    "mex": [
-        "Mexico",
+    "Mexico": [
         "Audi Mexico – App Integration"
     ],
-    "bra": [
-        "Brazil",
+    "Brazil": [
         "SAP K-SRM Rollout"
-    ]
+    ],
+    "South Africa": []
 }
-function displayProjects(country) {
-    let overFlow = false;
-    var proj = projects[country];
-    /* Clear all elements in projects-box */
-    var projectsContainer = document.getElementById("country-list");
-    projectsContainer.innerHTML = "";
-    /* insert title in container */
-    var h3 = document.createElement("h3");
-    h3.innerText = proj[0];
-    projectsContainer.appendChild(h3);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
+
+function showModal(country) {
+    let proj = countryData[country];
+    /* Append Title of country */
+    document.getElementById('countryModalLabel').innerText = country;
+
     /* Insert Projects */
     var ul = document.createElement("ul");
-    for (var i = 1; i < proj.length; i++) {
-        i>6 ? projectsContainer.style.overflowY = 'Scroll' : projectsContainer.style.overflowY = 'none' ;
+    for (var i = 0; i < proj.length; i++) {
+        /* i > 6 ? projectsContainer.style.overflowY = 'Scroll' : projectsContainer.style.overflowY = 'none'; */
         var li = document.createElement("li");
-        li.innerHTML = proj[i];
+        li.innerHTML = i+1 + "- " +proj[i];
         ul.appendChild(li);
     }
-    projectsContainer.appendChild(ul);
 
-    /* Set height of container */
-    let height = document.getElementById("map-box").clientHeight;
-    projectsContainer.style.height = height + 'px';
-    
-    
+    let detailContainer = document.getElementById('countryDetails');
+    detailContainer.innerHTML = "";
+    detailContainer.appendChild(ul);
+    new bootstrap.Modal(document.getElementById('countryModal')).show();
 }
 
 

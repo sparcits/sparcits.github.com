@@ -913,43 +913,6 @@
       </div>
    </section>
    <!-- Clients logo end -->
-   <!-- Clients -->
-   <!-- <section id="clients">
-      <div class="container-fluid">
-         <div class="row logos">
-            <div class="logo-container">
-               <div class="logo">
-                  <img src="./images/aims-logo.png" alt="">
-               </div>
-               <div class="logo ">
-                  <img src="./images/anhui-logo.png" alt="">
-               </div>
-               <div class="logo">
-                  <img src="./images/traton-logo.png" alt="">
-               </div>
-               <div class="logo ">
-                  <img src="./images/man.png" alt="">
-               </div>
-               <div class="logo">
-                  <img src="./images/audi-logo.png" alt="">
-               </div>
-               <div class="logo ">
-                  <img src="./images/bentley-logo.png" alt="">
-               </div>
-               <div class="logo">
-                  <img src="./images/vw-grp-china.png" alt="">
-               </div>
-               <div class="logo ">
-                  <img src="./images/skoda-logo.png" alt="">
-               </div>
-               <div class="logo">
-                  <img src="./images/powerco.png" alt="">
-               </div>
-            </div>
-         </div>
-      </div>
-   </section> -->
-   <!-- End Clients -->
    <!-- Global Presence -->
    <section id="global-presence">
       <div class="container">
@@ -958,61 +921,77 @@
                <h2 class="h1">VWITS - SAP Practice Footprint</h2>
                <p class="pb-3">Driving digital transformation worldwide with scalable, innovative, and industry-leading
                   SAP solutions.</p>
-            </div>
-         </div>
-      </div>
-      <div class="container">
-         <div class="row pb-5 pt-5">
-            <div class="col-4">
-               <div class="detail-box" id="country-list">
-                  <h3>Global Presence</h3>
-                  <ul>
-                     <li>Germany</li>
-                     <li>India</li>
-                     <li>Saudi-Arabia</li>
-                     <li>Russia</li>
-                     <li>Australia</li>
-                     <li>Sweden</li>
-
-                  </ul>
-               </div>
-            </div>
-            <div class="col-8">
-               <div class="map-box" id="map-box">
-                  <img src="./images/world-map.png" alt="">
-                  <div class="pin India" onclick="displayProjects('ind')">
-                  </div>
-                  <div class="pin China" onclick="displayProjects('chn')">
-                  </div>
-                  <div class="pin Saudi-Arabia" onclick="displayProjects('sau')">
-                  </div>
-                  <div class="pin Russia" onclick="displayProjects('rus')">
-                  </div>
-                  <div class="pin Australia" onclick="displayProjects('aus')">
-                  </div>
-                  <div class="pin Sweden" onclick="displayProjects('swe')">
-                  </div>
-                  <div class="pin Spain" onclick="displayProjects('esp')">
-                  </div>
-                  <div class="pin United-Kingdom" onclick="displayProjects('gbr')">
-                  </div>
-                  <div class="pin Belgium" onclick="displayProjects('bel')">
-                  </div>
-                  <div class="pin Germany" onclick="displayProjects('deu')">
-                  </div>
-                  <div class="pin United-States" onclick="displayProjects('usa')">
-                  </div>
-                  <div class="pin Mexico" onclick="displayProjects('mex')">
-                  </div>
-                  <div class="pin Brazil" onclick="displayProjects('bra')">
-                  </div>
-                  <div class="pin South-Africa" onclick="displayProjects('sa')">
-                  </div>
+               <div class="flag-grid">
+                  <img src="https://flagcdn.com/in.svg" alt="India">
+                  <img src="https://flagcdn.com/cn.svg" alt="China">
+                  <img src="https://flagcdn.com/sa.svg" alt="Saudi Arabia">
+                  <img src="https://flagcdn.com/ru.svg" alt="Russia">
+                  <img src="https://flagcdn.com/au.svg" alt="Australia">
+                  <img src="https://flagcdn.com/se.svg" alt="Sweden">
+                  <img src="https://flagcdn.com/es.svg" alt="Spain">
+                  <img src="https://flagcdn.com/gb.svg" alt="United Kingdom">
+                  <img src="https://flagcdn.com/be.svg" alt="Belgium">
+                  <img src="https://flagcdn.com/de.svg" alt="Germany">
+                  <img src="https://flagcdn.com/us.svg" alt="United States">
+                  <img src="https://flagcdn.com/mx.svg" alt="Mexico">
+                  <img src="https://flagcdn.com/br.svg" alt="Brazil">
+                  <img src="https://flagcdn.com/za.svg" alt="South Africa">
                </div>
             </div>
          </div>
+         <div class="row pb-5 pt-2">
+            <div class="map-container">
+               <svg viewBox="0 0 1920 1049" width="100%" height="auto" preserveAspectRatio="xMidYMid meet"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <!-- Background Image -->
+                  <image href="./images/world-map.png" width="1920" height="1049" />
+                  <circle cx="1300" cy="500" r="10" fill="#c2fe06" onclick="showModal('India')" data-bs-toggle="tooltip"
+                     title="India" />
+                  <circle cx="1400" cy="430" r="10" fill="#c2fe06" onclick="showModal('China')" data-bs-toggle="tooltip"
+                     title="China" />
+                  <circle cx="1120" cy="520" r="10" fill="#c2fe06" onclick="showModal('Saudi Arabia')"
+                     data-bs-toggle="tooltip" title="Saudi Arabia" />
+                  <circle cx="1400" cy="200" r="10" fill="#c2fe06" onclick="showModal('Russia')"
+                     data-bs-toggle="tooltip" title="Russia" />
+                  <circle cx="1600" cy="850" r="10" fill="#c2fe06" onclick="showModal('Australia')"
+                     data-bs-toggle="tooltip" title="Australia" />
+                  <circle cx="950" cy="250" r="10" fill="#c2fe06" onclick="showModal('Sweden')" data-bs-toggle="tooltip"
+                     title="Sweden" />
+                  <circle cx="860" cy="420" r="10" fill="#c2fe06" onclick="showModal('Spain')" data-bs-toggle="tooltip"
+                     title="Spain" />
+                  <circle cx="860" cy="300" r="10" fill="#c2fe06" onclick="showModal('United Kingdom')"
+                     data-bs-toggle="tooltip" title="United Kingdom" />
+                  <circle cx="900" cy="345" r="10" fill="#c2fe06" onclick="showModal('Belgium')"
+                     data-bs-toggle="tooltip" title="Belgium" />
+                  <circle cx="930" cy="345" r="10" fill="#c2fe06" onclick="showModal('Germany')"
+                     data-bs-toggle="tooltip" title="Germany" />
+                  <circle cx="340" cy="380" r="10" fill="#c2fe06" onclick="showModal('United States')"
+                     data-bs-toggle="tooltip" title="United States" />
+                  <circle cx="320" cy="500" r="10" fill="#c2fe06" onclick="showModal('Mexico')" data-bs-toggle="tooltip"
+                     title="Mexico" />
+                  <circle cx="600" cy="700" r="10" fill="#c2fe06" onclick="showModal('Brazil')" data-bs-toggle="tooltip"
+                     title="Brazil" />
+                  <circle cx="1000" cy="840" r="10" fill="#c2fe06" onclick="showModal('South Africa')"
+                     data-bs-toggle="tooltip" title="South Africa" />
+               </svg>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="countryModal" tabindex="-1" aria-labelledby="countryModalLabel"
+               aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content custom-modal">
+                     <div class="modal-header border-0">
+                        <h5 class="modal-title fw-bold" id="countryModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body" id="countryDetails">
+                        <!-- Content will be injected -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-
    </section>
    <!-- End Global Presence -->
    <!-- Footer -->

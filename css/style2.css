@@ -1002,203 +1002,63 @@ button {
 /* Global Presence */
 #global-presence {
      margin-top: 100px;
-}
 
-#global-presence .box {
-     padding: 7%;
-}
-
-#global-presence .detail-box {
-     background: rgba(0, 184, 172, 0.3);
-     height: 100%;
-     width: 100%;
-     padding: 5%;
-     border-radius: .7rem;
-}
-
-#global-presence .detail-box h3 {
-     padding: 0.5em;
-     font-size: 1.5rem;
-     border-bottom: 1px solid rgba(0, 184, 172, .3);
-}
-
-#global-presence .detail-box ul {
-     padding-top: 1rem;
-     padding-left: 1rem;
-}
-
-#global-presence .detail-box ul li {
-     padding: 0.5em;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-}
-
-#global-presence .map-box {
-     position: relative;
-     background: rgba(0, 184, 172, 0.1);
-     padding: 1rem;
-     border-radius: .7rem;
-     width: 100%;
-}
-
-#global-presence .map-box>img {
-     height: 100%;
-     width: 100%;
-     object-fit: contain;
-}
-
-#global-presence .map-box .pin {
-     background: #2bded3;
-     position: absolute;
-     width: 10px;
-     height: 10px;
-     border-radius: 50%;
-     cursor: pointer;
-}
-
-#global-presence .map-box .pin::before {
-     content: '';
-     background: #6bfff4;
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     border-radius: 50%;
-     animation: pulse 1.3s ease-in-out infinite;
-}
-
-@-webkit-keyframes pulse {
-     0% {
-          -webkit-transform: scale(0);
-          opacity: 0;
+     .map-container {
+          position: relative;
+          max-width: 100%;
+          margin: auto;
+          overflow: hidden;
+          border-radius: 12px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
      }
 
-     25% {
-          -webkit-transform: scale(0.3);
-          opacity: 1;
+     svg {
+          width: 100%;
+          height: auto;
      }
 
-     50% {
-          -webkit-transform: scale(0.6);
-          opacity: .6;
+     circle {
+          stroke: white;
+          stroke-width: 1;
+          animation: blink 1.5s infinite;
+          cursor: pointer;
      }
 
-     75% {
-          -webkit-transform: scale(.9);
-          opacity: .3;
+     @keyframes blink {
+
+          0%,
+          100% {
+               opacity: 1;
+               r: 10;
+          }
+
+          50% {
+               opacity: 0.4;
+               r: 14;
+          }
      }
 
-     100% {
-          -webkit-transform: scale(1);
-          opacity: 0;
+     .flag-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
      }
-}
 
-#global-presence .map-box .pin span {
-     display: inline-block;
-     white-space: nowrap;
-     position: absolute;
-     left: 1.5rem;
-     top: 50%;
-     transform: translate(-50%);
-     background: #fff;
-     border-radius: .7rem;
-}
+     .flag-grid img {
+          width: 30px;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+          transition: transform 0.3s ease;
+     }
 
-#global-presence .map-box .India {
-     right: 31%;
-     top: 46%;
-}
+     .flag-grid img:hover {
+          transform: scale(1.1);
+     }
 
-#global-presence .map-box .China {
-     right: 25%;
-     top: 36%;
-}
-
-#global-presence .map-box .Saudi-Arabia {
-     right: 38%;
-     top: 47%;
-}
-
-#global-presence .map-box .Russia {
-     right: 25%;
-     top: 20%;
-}
-
-#global-presence .map-box .Australia {
-     right: 18%;
-     top: 73%;
-}
-
-#global-presence .map-box .Sweden {
-     right: 45%;
-     top: 22%;
-}
-
-#global-presence .map-box .Spain {
-     right: 50%;
-     top: 36%;
-}
-
-#global-presence .map-box .United-Kingdom {
-     right: 50%;
-     top: 30%;
-}
-
-#global-presence .map-box .Belgium {
-     right: 49%;
-     top: 33%;
-}
-
-#global-presence .map-box .Germany {
-     top: 32%;
-     left: 51%;
-}
-
-#global-presence .map-box .United-States {
-     left: 26%;
-     top: 32%;
-}
-
-#global-presence .map-box .Mexico {
-     left: 24%;
-     top: 44%;
-}
-
-#global-presence .map-box .Brazil {
-     left: 36%;
-     top: 64%;
-}
-
-#global-presence .map-box .South-Africa {
-     left: 55%;
-     top: 78%;
-}
-
-
-
-#global-presence .projects-container {
-     position: absolute;
-     width: 100vw;
-     top: 0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
-
-#global-presence .projects-box {
-     width: 50vw;
-     min-height: 50vh;
-     top: 0;
-     background-color: rgba(0, 184, 172);
-     padding: 10px;
-     display: flex;
-     justify-content: space-between;
-}
-
-#global-presence .projects-box>i {
-     color: var(--black);
-     font-size: 30px;
+     .tooltip {
+          pointer-events: none;
+     }
 }
 
 
