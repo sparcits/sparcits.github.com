@@ -1,354 +1,12 @@
-/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
-
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,600,700,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap');
-
-/* ===========================================================
-Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
-=============================================================*/
-@font-face {
-     font-family: 'VW Head Regular';
-     font-style: normal;
-     font-weight: normal;
-     src: local('VW Head Regular'), url('fonts/VWHeadRegular.woff') format('woff');
+/* Subnav */
+.subnav-sticky {
+     position: sticky;
+     top:0px;
+     z-index: 1020;
+     background-color: var(--text-muted);
+     border-bottom: 1px solid var(--border-color);
 }
 
-
-@font-face {
-     font-family: 'VW Head Bold';
-     font-style: normal;
-     font-weight: normal;
-     src: local('VW Head Bold'), url('fonts/VWHeadBold.woff') format('woff');
-}
-
-
-@font-face {
-     font-family: 'VW Text Regular';
-     font-style: normal;
-     font-weight: normal;
-     src: local('VW Text Regular'), url('fonts/VWTextRegular.woff') format('woff');
-}
-
-
-@font-face {
-     font-family: 'VW Text Bold';
-     font-style: normal;
-     font-weight: normal;
-     src: local('VW Text Bold'), url('fonts/VWTextBold.woff') format('woff');
-}
-
-/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
-:root {
-     --dark-blue: #002733;
-     --black: #000;
-     --text-color: #fff;
-     --vw-group: #c2fe06;
-     --sidenav-size: 150px;
-}
-
-* {
-     box-sizing: border-box !important;
-}
-
-html {
-     scroll-behavior: smooth;
-}
-
-body {
-     color: var(--text-color);
-     background-color: var(--dark-blue);
-     font-size: 1rem;
-     font-family: 'VW Head Regular', 'VW Text Regular';
-     line-height: 1.80857;
-     font-weight: normal;
-     min-height: 100vh;
-     overflow-x: hidden;
-}
-
-a {
-     color: #1f1f1f;
-     text-decoration: none !important;
-     outline: none !important;
-     -webkit-transition: all .3s ease-in-out;
-     -moz-transition: all .3s ease-in-out;
-     -ms-transition: all .3s ease-in-out;
-     -o-transition: all .3s ease-in-out;
-     transition: all .3s ease-in-out;
-}
-
-.custom-container {
-     padding-top: 10%;
-     padding-left: 10%;
-     padding-right: 10%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-     letter-spacing: 0;
-     font-weight: normal;
-     position: relative;
-     padding: 0 0 10px 0;
-     font-weight: normal;
-     line-height: normal;
-     color: var(--text-color);
-     margin: 0
-}
-
-h3 {
-     font-size: 18px;
-}
-
-h4 {
-     font-size: 16px
-}
-
-h5 {
-     font-size: 14px
-}
-
-h6 {
-     font-size: 13px
-}
-
-*,
-*::after,
-*::before {
-     -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-     box-sizing: border-box;
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-     color: #000;
-     text-decoration: none !important;
-     opacity: 1
-}
-
-button:focus {
-     outline: none;
-}
-
-ul,
-li,
-ol {
-     margin: 0px;
-     padding: 0px;
-     list-style: none;
-}
-
-p {
-     margin: 0px;
-     font-weight: 500;
-     font-size: 15px;
-     line-height: 24px;
-}
-
-a {
-     color: #222222;
-     text-decoration: none;
-     outline: none !important;
-}
-
-a,
-.btn {
-     text-decoration: none !important;
-     outline: none !important;
-     -webkit-transition: all .3s ease-in-out;
-     -moz-transition: all .3s ease-in-out;
-     -ms-transition: all .3s ease-in-out;
-     -o-transition: all .3s ease-in-out;
-     transition: all .3s ease-in-out;
-}
-
-img {
-     max-width: 100%;
-     height: auto;
-}
-
-:focus {
-     outline: 0;
-}
-
-.btn-custom {
-     margin-top: 20px;
-     background-color: transparent !important;
-     border: 2px solid #ddd;
-     padding: 12px 40px;
-     font-size: 16px;
-}
-
-.lead {
-     font-size: 18px;
-     line-height: 30px;
-     color: #767676;
-     margin: 0;
-     padding: 0;
-}
-
-.form-control:focus {
-     border-color: #ffffff !important;
-     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
-}
-
-.navbar-form input {
-     border: none !important;
-}
-
-.badge {
-     font-weight: 500;
-}
-
-blockquote {
-     margin: 20px 0 20px;
-     padding: 30px;
-}
-
-button {
-     border: 0;
-     margin: 0;
-     padding: 0;
-     cursor: pointer;
-}
-
-.full {
-     float: left;
-     width: 100%;
-}
-
-.h-100 {
-     height: 100%;
-}
-
-.full {
-     width: 100%;
-     float: left;
-     margin: 0;
-     padding: 0;
-}
-
-.bg-dark-grey {
-     background-color: #002733;
-}
-
-.bg-gradient-dark {
-     background-image: linear-gradient(270deg, #2bded3, transparent);
-     background-color: #121e2b;
-}
-
-
-/* Preloader */
-
-#preloader {
-     position: fixed;
-     z-index: 9999999;
-     background: #fff;
-     width: 100%;
-     height: 100%;
-}
-
-#preloader .loader {
-     height: 100%;
-     width: 100%;
-     position: absolute;
-     left: 0;
-     top: 0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
-
-
-/* Header */
-#header {
-     width: 100%;
-     padding: 30px 30px;
-     background: var(--dark-blue);
-     border-bottom: 1px solid rgba(0, 184, 172, .2);
-}
-
-#header .brand-logo {
-     font-size: 1.5rem;
-}
-
-#header .nav-link {
-     font-size: 1.2rem;
-     display: block;
-     position: relative;
-     margin: 0 10px;
-     color: #fff;
-}
-
-#header .nav-link::after {
-     content: '';
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     height: 0.1em;
-     background-color: rgba(0, 184, 172, .8);
-     opacity: 0;
-     transition: opacity 300ms, transform 300ms;
-}
-
-#header .nav-link:hover::after,
-#header .nav-link:focus::after {
-     opacity: 1;
-     transform: translate3d(0, 0.2em, 0);
-}
-
-#header .dropdown-menu {
-     background-color: #333533;
-}
-
-#header .dropdown-menu h3,
-#header .dropdown-menu h5,
-#header .dropdown-menu i {
-     color: #fff;
-}
-
-#header .dropdown-menu h5 {
-     font-weight: bold;
-}
-
-#header .dropdown-menu .desc-text {
-     font-size: 12px;
-     color: #fff;
-}
-
-/* End Header Area */
-
-/* Sidenav */
-#subnav{
-     background: rgba(255, 255, 255, .25);
-     .subnav{
-          .col-12{
-               display: flex;
-               justify-content: flex-end;
-               .nav-item{
-                    padding: 10px;
-                    cursor: pointer;
-                    a{
-                         color: #fff;
-                    }
-                    
-               }
-          }
-     }
-}
 /* Success Stories */
 #success-stories-hero .carousel-inner {
      height: 80vh;
@@ -368,14 +26,6 @@ button {
      height: 100%;
 }
 
-#success-stories-hero .box_second_of_type {
-     background-image: url(../images/background-waves.jpg);
-     background-repeat: no-repeat;
-     background-size: 100%;
-     padding-top: 100px;
-     height: 100%;
-}
-
 #success-stories-hero .carousel-item>div {
      padding: 7%;
 }
@@ -386,6 +36,59 @@ button {
 
 #success-achievement {
      padding-bottom: 5%;
+
+     .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-icon {
+      font-size: 1.4rem;
+      color: var(--icon-bg);
+    }
+
+    .external-icon {
+      font-size: 1rem;
+      color: var(--icon-bg);
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      text-decoration: none;
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      color: var(--text-color);
+    }
+
+    .project-desc {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .tech-tags {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 1rem;
+      font-family: monospace;
+    }
+
+    .category-section {
+      margin-bottom: 4rem;
+    }
 }
 
 #success-achievement h2 {
@@ -398,193 +101,3 @@ button {
      padding: 5%;
 }
 
-#success-achievement .box {
-     background-image: linear-gradient(0deg, rgba(0, 184, 172, 0.39), transparent 45%);
-     border: none;
-     width: 300px;
-     height: 430px;
-     position: relative;
-     transition: 0.4s ease-out;
-     .box-text{
-          opacity: 0;
-          padding-top: 100px;
-
-          button{
-               padding: 5px;
-               margin-top: 5px;
-          }
-     }
-
-     &:hover{
-          transform: scale(1.10, 1.10);
-          .box-text{
-               opacity: 1;
-               transition-duration: 550ms;
-               transition-timing-function: cubic-bezier(0.85,0,0,1);
-          }
-     }
-}
-
-/* #success-achievement .box:hover {
-     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-     transform: scale(1.10, 1.10);
-     transition: 0.5s;
-} */
-
-#success-achievement .vw-china {
-     background-image: url(../images/china.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-}
-
-#success-achievement .box h5 {
-     font-size: 1.5rem;
-     font-weight: 900;
-}
-
-
-#success-achievement .vwc-investment {
-     background-image: url(../images/vwc-investment-company.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-}
-
-#success-achievement .man-conversion {
-     background-image: url(../images/man-trucks.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-}
-
-#success-achievement .vw-anhui {
-     background-image: url(../images/china.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-}
-
-#success-achievement .vw-australia {
-     background-image: url(../images/vw-australia.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-}
-
-#success-achievement .audi-china {
-     background-image: url(../images/audi-china.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-}
-
-#success-achievement .powerco-se {
-     background-image: url(../images/powerco-se.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-}
-
-#success-achievement .title-box {
-     display: flex;
-     align-items: center;
-}
-
-#success-achievement .box-title {
-     font-size: 20px;
-     text-transform: uppercase;
-}
-
-#success-achievement .box-body,#success-achievement .description {
-     padding: 10%;
-}
-
-#success-achievement .box-body>a {
-     display: block;
-     width: 150px;
-     margin-top: 20px;
-     padding: 10px 2em;
-     border-style: solid;
-     border-width: 1px;
-     border-color: #2bded3;
-     border-radius: 2em;
-     background-color: transparent;
-     font-size: 0.9em;
-     line-height: 1.5;
-     font-weight: 400;
-     text-transform: uppercase;
-     color: #fff;
-}
-
-#vw-grp-china-hero {
-     background-image: url(../images/vw-grp-china-banner.png);
-     height: 100vh;
-     margin-left: var(--sidenav-size);
-     background-size: cover;
-}
-
-#vw-grp-china-hero .container,
-#vw-grp-china-hero .container .row {
-     height: 100%;
-}
-
-#vw-grp-china-hero .container .row .details {
-     background: var(--dark-blue);
-     padding: 5%;
-}
-
-#vw-grp-china-hero .about {
-     background: var(--dark-blue);
-     padding: 5%;
-}
-
-#vw-grp-china-about {
-     margin-left: var(--sidenav-size);
-}
-
-#story-hero {
-     background-image: linear-gradient(270deg, #2bded3, transparent);
-     padding-top: 100px;
-}
-
-#story-hero .row {
-     padding: 7%;
-}
-
-#story-intro {
-     padding-top: 10%;
-     padding-bottom: 8%;
-}
-
-#story-intro .details__container {
-     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-     border-radius: 20px;
-}
-
-#story-intro .list {
-     padding-inline-start: 1.5em;
-     font-weight: 400;
-
-     ::marker {
-          content: "*";
-          color: #2bded3;
-     }
-}
-
-#story-intro .list>li {
-     position: relative;
-     padding-inline-start: 0.5em;
-     padding-top: 1.5em;
-     border-bottom: 1px solid #48b2;
-     cursor: default;
-     transition: color 0.4s;
-
-     &:hover {
-          color: #2bded3;
-
-          &::marker {
-               font-weight: 700;
-          }
-     }
-}

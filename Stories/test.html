@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --text-color: #ccd6f6;
+      --dark-bg: #0a192f;
+      --card-bg: #112240;
+      --text-muted: #8892b0;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --icon-bg: #64ffda;
+      --teal: #64ffda;
+    }
+
+    body {
+      background-color: var(--dark-bg);
+      color: var(--text-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: var(--icon-bg);
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .project-logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .project-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .external-icon {
+      font-size: 1.2rem;
+      color: var(--icon-bg);
+      text-decoration: none;
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      color: var(--text-color);
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .tech-tags {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      font-family: monospace;
+    }
+
+    .category-section {
+      margin-bottom: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="text-center mb-5" style="color: var(--text-color);">Project Portfolio</h1>
+
+    <!-- Section Template -->
+    <div class="category-section">
+      <h2 class="section-title">Brownfield Projects</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="project-card">
+            <div class="project-header">
+              <img src="https://via.placeholder.com/100x40" alt="Project Logo" class="project-logo">
+              <div class="project-icons">
+                <a href="#" class="external-icon" title="Visit Project"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="project-title">Legacy Modernization</div>
+            <div class="project-desc">Migrated legacy systems to a microservices-based cloud-native platform.</div>
+            <div class="tech-tags">Java · Spring Boot · Docker</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="project-card">
+            <div class="project-header">
+              <img src="https://via.placeholder.com/100x40" alt="Project Logo" class="project-logo">
+              <div class="project-icons">
+                <a href="#" class="external-icon" title="Visit Project"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="project-title">Payment Gateway Revamp</div>
+            <div class="project-desc">Refactored payment workflows with enhanced security and retry mechanisms.</div>
+            <div class="tech-tags">.NET · Azure · SQL Server</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="project-card">
+            <div class="project-header">
+              <img src="https://via.placeholder.com/100x40" alt="Project Logo" class="project-logo">
+              <div class="project-icons">
+                <a href="#" class="external-icon" title="Visit Project"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="project-title">API Re-engineering</div>
+            <div class="project-desc">Converted SOAP-based APIs to RESTful architecture with JWT auth.</div>
+            <div class="tech-tags">Node.js · Express · MongoDB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat same structure for other sections with logo -->
+
+  </div>
+</body>
+</html>
