@@ -44,29 +44,34 @@
    </div>
    <!-- banner -->
    <section id="success-stories-hero">
-      <div class="container-fluid">
-         <div class="row align-items-center">
-            <div id="cauroselStories" class="carousel carousel-dark slide" data-bs-ride="carousel">
-               <div class="carousel-inner">
-                  <div class="carousel-item box_first_of_type active">
-                     <div class="row">
-                        <div class="col-lg-6">
-                           <div>
-                              <h2 class="h1">Our Success Stories</h2>
-                              <p class="pb-3">Unlocking business potentials with experts and their expert solutions,
-                                 tailored to meet your unique needs and challenges.</p>
-                              <div>
-                                 <span class="text-uppercase"><b>SPARC</b></span>
-                                 <span class="text-uppercase">Team</span>
-                                 <span class="spacer mt-2"></span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+      <div id="storiesCarousel" class="carousel slide" data-bs-ride="carousel">
+         <!-- Slides -->
+         <div class="carousel-inner">
+            <div class="carousel-item stories-carousel-item active">
+               <img src="./images/success-story-image.jpg" class="d-block w-100" alt="Slide 1">
+               <div class="stories-hero-content">
+                  <h1>Our Success Stories</h1>
+                  <p>Unlocking business potentials with experts and their expert solutions,
+                     tailored to meet your unique needs and challenges.</p>
+                  <div class="d-flex gap-3 flex-wrap">
+                     <a href="./Team/" class="btn btn-team px-4">Our Team</a>
+                     <a href="#contact" class="btn btn-contact px-4">Contact Us</a>
                   </div>
                </div>
             </div>
          </div>
+
+         <!-- Controls -->
+         <!-- <button class="carousel-control-prev" type="button" data-bs-target="#storiesCarousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#storiesCarousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+         </button> -->
       </div>
    </section>
    <!-- end banner -->

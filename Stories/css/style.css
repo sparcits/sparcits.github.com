@@ -1,94 +1,123 @@
 /* Subnav */
 .subnav-sticky {
      position: sticky;
-     top:0px;
+     top: 0px;
      z-index: 1020;
      background-color: var(--text-muted);
      border-bottom: 1px solid var(--border-color);
 }
 
 /* Success Stories */
-#success-stories-hero .carousel-inner {
-     height: 80vh;
-     background: var(--dark-blue);
+#success-stories-hero {
+     position: relative;
+
+     .stories-carousel-item {
+          height: 80vh;
+          position: relative;
+     }
+
+     .stories-carousel-item img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+     }
+
+     .stories-hero-content {
+          position: absolute;
+          top: 50%;
+          left: 5%;
+          transform: translateY(-50%);
+          color: white;
+          max-width: 700px;
+          text-align: left;
+
+          .btn-team {
+               background-color: var(--icon-bg);
+          }
+
+          .btn-team:hover {
+               background-color: var(--card-bg);
+               color: var(--text-color);
+          }
+
+          .btn-contact {
+               border: 1px solid #fff;
+               color: var(--text-color);
+          }
+
+          .btn-contact:hover {
+               border: 1px solid var(--teal);
+               color: var(--teal);
+          }
+     }
+
+     .stories-hero-content h1 {
+          font-size: 3rem;
+          font-weight: bold;
+     }
+
+     .stories-hero-content p {
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+     }
 }
 
-#success-stories-hero .container-fluid {
-     padding: 0 !important;
-}
-
-
-#success-stories-hero .box_first_of_type {
-     background-image: url(../images/success-story-image.jpg);
-     background-repeat: no-repeat;
-     background-size: 100%;
-     padding-top: 100px;
-     height: 100%;
-}
-
-#success-stories-hero .carousel-item>div {
-     padding: 7%;
-}
-
-#success-stories-hero .box>div {
-     width: 50%;
-}
 
 #success-achievement {
      padding-bottom: 5%;
 
      .project-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.5rem;
-      height: 100%;
-      transition: all 0.3s ease;
-      position: relative;
-    }
+          background-color: var(--card-bg);
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          padding: 1.5rem;
+          height: 100%;
+          transition: all 0.3s ease;
+          position: relative;
+     }
 
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-    }
+     .project-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+     }
 
-    .project-icon {
-      font-size: 1.4rem;
-      color: var(--icon-bg);
-    }
+     .project-icon {
+          font-size: 1.4rem;
+          color: var(--icon-bg);
+     }
 
-    .external-icon {
-      font-size: 1rem;
-      color: var(--icon-bg);
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      text-decoration: none;
-    }
+     .external-icon {
+          font-size: 1rem;
+          color: var(--icon-bg);
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          text-decoration: none;
+     }
 
-    .project-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-top: 1rem;
-      color: var(--text-color);
-    }
+     .project-title {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-top: 1rem;
+          color: var(--text-color);
+     }
 
-    .project-desc {
-      color: var(--text-light);
-      font-size: 0.95rem;
-      margin-top: 0.5rem;
-    }
+     .project-desc {
+          color: var(--text-light);
+          font-size: 0.95rem;
+          margin-top: 0.5rem;
+     }
 
-    .tech-tags {
-      font-size: 0.8rem;
-      color: var(--text-light);
-      margin-top: 1rem;
-      font-family: monospace;
-    }
+     .tech-tags {
+          font-size: 0.8rem;
+          color: var(--text-light);
+          margin-top: 1rem;
+          font-family: monospace;
+     }
 
-    .category-section {
-      margin-bottom: 4rem;
-    }
+     .category-section {
+          margin-bottom: 4rem;
+     }
 }
 
 #success-achievement h2 {
@@ -100,4 +129,3 @@
 #success-achievement .box-container {
      padding: 5%;
 }
-
