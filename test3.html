@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corporate Hero Carousel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .carousel-item {
+      height: 75vh;
+      position: relative;
+    }
+
+    .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      color: white;
+      max-width: 600px;
+      text-align: left;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Move carousel controls out of hero content area */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+    }
+
+    .carousel-control-prev {
+      left: 1rem;
+    }
+
+    .carousel-control-next {
+      right: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      .carousel-item {
+        height: 60vh;
+      }
+
+      .hero-content {
+        left: 8%;
+        right: 8%;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero Carousel -->
+<div id="fullWidthCarousel" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#fullWidthCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#fullWidthCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Slide 1">
+      <div class="hero-content">
+        <h1>Welcome to Our Vision</h1>
+        <p>We build future-ready digital solutions that empower businesses globally.</p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="#our-team" class="btn btn-primary px-4">Our Team</a>
+          <a href="#contact" class="btn btn-outline-light px-4">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Slide 2">
+      <div class="hero-content">
+        <h1>Driven by Innovation</h1>
+        <p>Let us transform your challenges into lasting success stories.</p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="#our-team" class="btn btn-primary px-4">Our Team</a>
+          <a href="#contact" class="btn btn-outline-light px-4">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#fullWidthCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#fullWidthCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,458 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Detail</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Horizontal Timeline</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    :root {
-      --text-color: #edf2f7;
-      --dark-bg: #080d0e;
-      --card-bg: #131d20;
-      --text-muted: #464a4a;
-      --text-light: #a0aec0;
-      --border-color: rgba(255, 255, 255, 0.1);
-      --icon-bg: #c2fe06;
-      --teal: #008C82;
-      --summary-bg: #0b1a1c;
-    }
-
     body {
-      background-color: var(--dark-bg);
-      color: var(--text-color);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
     }
-
-    .hero-section {
-      background: radial-gradient(circle at top left, rgba(194, 254, 6, 0.05), transparent 70%);
-      padding: 6rem 1rem;
-    }
-
-    .hero-logo {
-      width: 180px;
-    }
-
-    .highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-
-    @media (min-width: 768px) {
-      .highlight-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 992px) {
-      .highlight-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .highlight-badge {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.5rem;
-      font-weight: 500;
-      color: var(--text-light);
-      text-align: center;
-      aspect-ratio: 1 / 1;
+    .timeline {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+      gap: 20px;
+      overflow-x: auto;
+      white-space: nowrap;
     }
-
-    .executive-summary-section {
-      padding: 6rem 1rem;
-      background-color: var(--summary-bg);
-    }
-
-    .executive-summary-section h2 {
-      color: var(--teal);
-      margin-bottom: 1rem;
-    }
-
-    .executive-summary-section p {
-      color: var(--text-light);
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    .executive-summary-img {
-      max-width: 100%;
-      border-radius: 0.5rem;
-    }
-
-    .summary-highlights {
-      margin-top: 2rem;
-    }
-
-    .summary-highlight-box {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 0.75rem;
-      padding: 1.5rem;
-      text-align: center;
-      color: var(--text-light);
-    }
-
-    .summary-highlight-box h5 {
-      color: var(--text-color);
-      margin-bottom: 0.5rem;
-      font-size: 1.25rem;
-    }
-
-    .module-coverage-section {
-      padding: 6rem 1rem;
-    }
-
-    .module-coverage-section h2 {
-      color: var(--teal);
-      margin-bottom: 2rem;
-    }
-
-    .module-card {
-      padding: 1rem 0;
-      color: var(--text-light);
-      background: none;
+    .timeline button {
+      background-color: transparent;
       border: none;
-    }
-
-    .module-card h5 {
-      color: var(--text-color);
-    }
-
-    .benefits-challenges-section {
-      padding: 0;
-      background-color: var(--summary-bg);
-    }
-
-    .benefits-box,
-    .challenges-box {
-      padding: 6rem 2rem;
-    }
-
-    .benefits-challenges-box h5 {
-      color: var(--text-color);
-      margin-bottom: 1rem;
-    }
-
-    .benefits-challenges-box p {
-      color: var(--text-light);
-    }
-
-    .key-highlights-section {
-      background-color: #0f1c1d;
-      padding: 6rem 1rem;
-    }
-
-    .highlight-item {
-      margin-bottom: 2rem;
-    }
-
-    .highlight-item i {
-      color: var(--icon-bg);
-      font-size: 1.75rem;
-      margin-right: 0.75rem;
-    }
-
-    .highlight-item h5 {
-      color: var(--text-color);
-      margin-bottom: 0.25rem;
-    }
-
-    .highlight-item p {
-      color: var(--text-light);
-    }
-
-    @media (max-width: 768px) {
-      .highlight-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .project-roadmap-section {
-      background-color: #080d0e;
-      padding: 6rem 1rem;
-      color: var(--text-color);
+      color: #888;
+      font-size: 18px;
       position: relative;
     }
-
-    .roadmap-timeline {
-      position: relative;
-      padding-bottom: 2rem;
+    .timeline button.active {
+      color: #00ffd1;
     }
-
-    .timeline-line {
+    .timeline button::before {
+      content: "";
       position: absolute;
-      top: 3.5rem;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: var(--border-color);
-      z-index: 1;
-    }
-
-    .roadmap-step {
-      position: relative;
-      z-index: 2;
-    }
-
-    .roadmap-icon {
-      width: 50px;
-      height: 50px;
-      background-color: var(--icon-bg);
-      color: #000;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      line-height: 50px;
-      font-weight: bold;
-      margin: 0 auto;
-      z-index: 2;
-      box-shadow: 0 0 0 4px var(--dark-bg);
+      background-color: #888;
+    }
+    .timeline button.active::before {
+      background-color: #00ffd1;
+    }
+    .year-section {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 30px;
+    }
+    .year-image {
+      height: 300px;
+      width: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .year-projects {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background-color: #002c2b;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 255, 209, 0.1);
+    }
+    .project-card h5 {
+      color: #00ffd1;
+      font-size: 16px;
     }
   </style>
 </head>
-
 <body>
-
-  <!-- Hero Section -->
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="row align-items-center gy-4">
-        <!-- Left: Logo + Title + Tagline -->
-        <div class="col-md-6 text-md-start text-center">
-          <img src="logo.png" alt="Project Logo" class="hero-logo mb-4">
-          <h1 class="fw-bold">Project Name</h1>
-          <p class="lead text-light">Your powerful tagline goes here, brief and bold.</p>
-        </div>
-        <!-- Right: Highlight Grid -->
-        <div class="col-md-6">
-          <div class="highlight-grid">
-            <div class="highlight-badge">7 Year Program</div>
-            <div class="highlight-badge">50+ Modules</div>
-            <div class="highlight-badge">Global Reach</div>
-            <div class="highlight-badge">Real-time Analytics</div>
-          </div>
-        </div>
-      </div>
+  <div class="container">
+    <div class="timeline" id="timeline">
+      <button onclick="showYear('2015')" class="active">2015-18</button>
+      <button onclick="showYear('2019')">2019-20</button>
+      <button onclick="showYear('2021')">2021</button>
+      <button onclick="showYear('2022')">2022</button>
+      <button onclick="showYear('2023')">2023</button>
+      <button onclick="showYear('2024')">2024</button>
+      <button onclick="showYear('2025')">2025</button>
     </div>
-  </section>
 
-
-  <!-- Executive Summary Section -->
-  <section class="executive-summary-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <img src="summary.jpg" alt="Project Overview" class="executive-summary-img">
+    <div id="year-content" class="year-section">
+      <img id="year-img" class="year-image" src="images/2015.jpg" alt="2015-18 Image" />
+      <div class="year-projects" id="project-list">
+        <div class="project-card">
+          <h5>VOLKSWAGEN - FARIS</h5>
+          <p>FARIS (BW on HANA) – SAP Support</p>
         </div>
-        <div class="col-md-6">
-          <h2>Executive Summary</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia nunc id leo vehicula, in
-            fermentum nibh pharetra.</p>
-          <p>Integer suscipit orci at leo vehicula, nec imperdiet nisl malesuada. Pellentesque non enim ut diam posuere
-            pretium.</p>
-          <div class="row summary-highlights mt-4">
-            <div class="col-md-4">
-              <div class="summary-highlight-box">
-                <h5>20+ Teams</h5>
-                <p>Collaboration at scale</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="summary-highlight-box">
-                <h5>8 Countries</h5>
-                <p>International rollout</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="summary-highlight-box">
-                <h5>150K+ Users</h5>
-                <p>Widespread adoption</p>
-              </div>
-            </div>
-          </div>
+        <div class="project-card">
+          <h5>ŠKODA VWIPL</h5>
+          <p>S/4HANA Go-live, ECC6.0 to S/4HANA 1809</p>
+        </div>
+        <div class="project-card">
+          <h5>SCANIA</h5>
+          <p>NBF for SCANIA (Order to Deliver) S/4HANA</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Module Coverage Section -->
-  <section class="module-coverage-section">
-    <div class="container">
-      <h2 class="fw-bold mb-5">Module Coverage</h2>
-      <div class="row">
-        <div class="col-md-4 module-card">
-          <h5><i class="bi bi-gear"></i> Operations</h5>
-          <p>Automation, scheduling, and workflow monitoring</p>
-        </div>
-        <div class="col-md-4 module-card">
-          <h5><i class="bi bi-people"></i> HR & Admin</h5>
-          <p>Staffing, evaluations, leave management</p>
-        </div>
-        <div class="col-md-4 module-card">
-          <h5><i class="bi bi-currency-dollar"></i> Finance</h5>
-          <p>Budgeting, payments, reporting, and auditing</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits & Challenges Section -->
-  <!-- Benefits & Challenges Section -->
-<section class="benefits-challenges-section" style="background-color: var(--summary-bg); padding: 6rem 0;">
-  <div class="container-fluid">
-    <div class="row text-light">
-      
-      <!-- Benefits -->
-      <div class="col-md-6 px-5" style="background-color: rgba(0, 140, 130, 0.05);">
-        <h2 class="text-teal mb-4 mt-2">Key Business Benefits</h2>
-        <ul class="list-unstyled fs-5">
-          <li class="mb-3 p-3 rounded" style="background-color: rgba(255, 255, 255, 0.03);">
-            <i class="bi bi-check-circle-fill me-2 text-success"></i>
-            Increased efficiency through automation
-          </li>
-          <li class="mb-3 p-3 rounded" style="background-color: rgba(255, 255, 255, 0.05);">
-            <i class="bi bi-check-circle-fill me-2 text-success"></i>
-            Centralized data and real-time access
-          </li>
-          <li class="mb-3 p-3 rounded" style="background-color: rgba(255, 255, 255, 0.08);">
-            <i class="bi bi-check-circle-fill me-2 text-success"></i>
-            Enhanced compliance and governance
-          </li>
-        </ul>
-      </div>
-
-      <!-- Challenges -->
-      <div class="col-md-6 px-5" style="background-color: rgba(255, 99, 71, 0.05);">
-        <h2 class="text-teal mb-4 mt-2">Key Challenges</h2>
-        <ul class="list-unstyled fs-5">
-          <li class="mb-3 p-3 rounded" style="background-color: rgba(255, 255, 255, 0.03);">
-            <i class="bi bi-exclamation-circle-fill me-2 text-warning"></i>
-            Integrating legacy systems
-          </li>
-          <li class="mb-3 p-3 rounded" style="background-color: rgba(255, 255, 255, 0.05);">
-            <i class="bi bi-exclamation-circle-fill me-2 text-warning"></i>
-            User onboarding across regions
-          </li>
-          <li class="mb-3 p-3 rounded" style="background-color: rgba(255, 255, 255, 0.08);">
-            <i class="bi bi-exclamation-circle-fill me-2 text-warning"></i>
-            Ensuring scalability for future growth
-          </li>
-        </ul>
-      </div>
-
     </div>
   </div>
-</section>
 
+  <script>
+    const data = {
+      '2015': {
+        img: 'images/2015.jpg',
+        projects: [
+          { title: 'VOLKSWAGEN - FARIS', desc: 'FARIS (BW on HANA) – SAP Support' },
+          { title: 'ŠKODA VWIPL', desc: 'S/4HANA Go-live, ECC6.0 to S/4HANA 1809' },
+          { title: 'SCANIA', desc: 'NBF for SCANIA (Order to Deliver) S/4HANA' }
+        ]
+      },
+      '2019': {
+        img: 'images/2019.jpg',
+        projects: [
+          { title: 'AUDI', desc: 'BW System Upgrade and Consolidation' },
+          { title: 'VW Brazil', desc: 'S/4HANA Central Finance Implementation' }
+        ]
+      },
+      '2021': {
+        img: 'images/2021.jpg',
+        projects: [
+          { title: 'SCANIA', desc: 'SAP Analytics Cloud Dashboard Rollout' }
+        ]
+      },
+      '2022': {
+        img: 'images/2022.jpg',
+        projects: [
+          { title: 'ŠKODA India', desc: 'Data Lake Integration Project' }
+        ]
+      },
+      '2023': {
+        img: 'images/2023.jpg',
+        projects: [
+          { title: 'VW Group', desc: 'Global KPI Reporting on SAP BTP' }
+        ]
+      },
+      '2024': {
+        img: 'images/2024.jpg',
+        projects: [
+          { title: 'SCANIA', desc: 'Intelligent Enterprise Enablement' }
+        ]
+      },
+      '2025': {
+        img: 'images/2025.jpg',
+        projects: [
+          { title: 'VW NextGen', desc: 'AI-Powered Logistics Optimisation' }
+        ]
+      }
+    };
 
-  <!-- Key Highlights Section -->
-  <section class="key-highlights-section">
-    <div class="container">
-      <h2 class="fw-bold text-teal mb-5">Key Highlights</h2>
-      <div class="row">
-        <div class="col-md-4 highlight-item">
-          <div class="d-flex align-items-start">
-            <i class="bi bi-lightning-charge-fill"></i>
-            <div>
-              <h5>24x7 Uptime</h5>
-              <p>Highly available systems with global failover capabilities.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 highlight-item">
-          <div class="d-flex align-items-start">
-            <i class="bi bi-person-lock"></i>
-            <div>
-              <h5>Role-based Access</h5>
-              <p>Secure and customizable permissions for every user type.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 highlight-item">
-          <div class="d-flex align-items-start">
-            <i class="bi bi-bar-chart"></i>
-            <div>
-              <h5>Analytics-Driven</h5>
-              <p>Real-time reporting and dashboards integrated into workflows.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 highlight-item">
-          <div class="d-flex align-items-start">
-            <i class="bi bi-window"></i>
-            <div>
-              <h5>Custom Dashboards</h5>
-              <p>Dynamic views tailored to teams, roles and KPIs.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 highlight-item">
-          <div class="d-flex align-items-start">
-            <i class="bi bi-globe"></i>
-            <div>
-              <h5>Global Standards</h5>
-              <p>GDPR, SOC2, ISO-compliant security and privacy architecture.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 highlight-item">
-          <div class="d-flex align-items-start">
-            <i class="bi bi-phone"></i>
-            <div>
-              <h5>Mobile-first</h5>
-              <p>Accessible and responsive across all devices and screen sizes.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    function showYear(year) {
+      document.querySelectorAll('.timeline button').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
 
-  <!-- Project Plan / Roadmap Section -->
-  <section class="project-roadmap-section">
-    <div class="container">
-      <h2 class="fw-bold mb-5 text-center text-teal">Project Roadmap</h2>
-      <div class="roadmap-timeline position-relative">
-        <div class="row gx-5 gy-4">
-          <div class="col-md-3 text-center roadmap-step">
-            <div class="roadmap-icon">1</div>
-            <h5 class="mt-3">Initiation</h5>
-            <p class="small text-light">Requirement gathering, stakeholder alignment</p>
-            <span class="text-muted">Jan 2024</span>
-          </div>
-          <div class="col-md-3 text-center roadmap-step">
-            <div class="roadmap-icon">2</div>
-            <h5 class="mt-3">Design</h5>
-            <p class="small text-light">Architecture, UI/UX, technical planning</p>
-            <span class="text-muted">Feb – Mar 2024</span>
-          </div>
-          <div class="col-md-3 text-center roadmap-step">
-            <div class="roadmap-icon">3</div>
-            <h5 class="mt-3">Development</h5>
-            <p class="small text-light">Module development, internal QA</p>
-            <span class="text-muted">Apr – Aug 2024</span>
-          </div>
-          <div class="col-md-3 text-center roadmap-step">
-            <div class="roadmap-icon">4</div>
-            <h5 class="mt-3">Go-Live</h5>
-            <p class="small text-light">Pilot testing, rollout, training</p>
-            <span class="text-muted">Sep 2024</span>
-          </div>
-        </div>
-        <div class="timeline-line d-none d-md-block"></div>
-      </div>
-    </div>
-  </section>
+      const yearData = data[year];
+      document.getElementById('year-img').src = yearData.img;
 
-
+      const projectList = document.getElementById('project-list');
+      projectList.innerHTML = '';
+      yearData.projects.forEach(proj => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.innerHTML = `<h5>${proj.title}</h5><p>${proj.desc}</p>`;
+        projectList.appendChild(card);
+      });
+    }
+  </script>
 </body>
-
 </html>
