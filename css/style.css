@@ -1,47 +1,90 @@
 /* Capabilities */
-#capabilities .container-fluid {
-     padding: 0 !important;
-}
 
-#capabilities .carousel-inner {
-     height: 95vh;
-     background: var(--dark-bg);
-}
 
-#capabilities .box_first_of_type {
-     background-image: url(../images/banner1.jpg);
-     background-repeat: no-repeat;
-     background-size: 100%;
-     padding-top: 100px;
-     height: 100%;
-}
+#capabilities {
+     position: relative;
 
-#capabilities .box_second_of_type {
-     background-image: url(../images/banner2.jpg);
-     background-repeat: no-repeat;
-     background-size: 100%;
-     padding-top: 100px;
-     height: 100%;
-}
+     .capabilities-carousel-item {
+          height: 80vh;
+          position: relative;
+     }
 
-#capabilities .box_third_of_type {
-     background-image: url(../images/team.jpg);
-     background-repeat: no-repeat;
-     background-size: 100%;
-     padding-top: 100px;
-}
+     .capabilities-carousel-item img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+     }
 
-#capabilities .carousel-item>div {
-     padding: 7%;
-}
+     .capabilities-hero-content {
+          position: absolute;
+          top: 50%;
+          left: 5%;
+          transform: translateY(-50%);
+          color: white;
+          max-width: 700px;
+          text-align: left;
 
-#capabilities .box>div {
-     width: 50%;
-}
+          .btn-team{
+               background-color: var(--icon-bg);
+          }
 
-#capabilities .carousel-control-next,
-.carousel-control-prev {
-     width: 3%;
+          .btn-team:hover {
+               background-color: var(--card-bg);
+               color: var(--text-color);
+          }
+
+          .btn-contact{
+               border: 1px solid #fff;
+               color: var(--text-color);
+          }
+
+          .btn-contact:hover{
+               border: 1px solid var(--teal);
+               color: var(--teal);
+          }
+     }
+
+     .capabilities-hero-content h1 {
+          font-size: 3rem;
+          font-weight: bold;
+     }
+
+     .capabilities-hero-content p {
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+     }
+
+     .carousel-control-prev,
+     .carousel-control-next {
+          width: 5%;
+     }
+
+     .carousel-control-prev {
+          left: 1rem;
+     }
+
+     .carousel-control-next {
+          right: 1rem;
+     }
+
+     @media (max-width: 576px) {
+          .capabilities-carousel-item {
+               height: 60vh;
+          }
+
+          .capabilities-hero-content {
+               left: 8%;
+               right: 8%;
+          }
+
+          .capabilities-hero-content h1 {
+               font-size: 2rem;
+          }
+
+          .capabilities-hero-content p {
+               font-size: 1rem;
+          }
+     }
 }
 
 /* #clients */

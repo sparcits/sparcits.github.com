@@ -36,59 +36,56 @@
    <header id="header-box"></header>
    <!-- banner -->
    <section id="capabilities">
-      <div class="container-fluid">
-         <div class="row align-items-center">
-            <div id="capabilities-banner" class="carousel carousel-dark slide" data-bs-ride="carousel">
-               <div class="carousel-inner">
-                  <div class="carousel-item box_first_of_type">
-                     <div class="row">
-                        <div class="col-lg-6">
-                           <div>
-                              <h2 class="h1">Delivering Value Through Solutions</h2>
-                              <p class="pb-3">We design strategic solutions that drive impact-bridging ideas,
-                                 architecture, and execution.</p>
-                              <div>
-                                 <a href="./Team">
-                                    <span class="text-uppercase"><b>SPARC</b></span>
-                                    <span class="text-uppercase">Team</span>
-                                    <span class="spacer mt-2"></span>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+      <div id="capabilitiesCarousel" class="carousel slide" data-bs-ride="carousel">
+
+         <!-- Indicators -->
+         <div class="carousel-indicators">
+            <button type="button" data-bs-target="#capabilitiesCarousel" data-bs-slide-to="0" class="active"
+               aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#capabilitiesCarousel" data-bs-slide-to="1"
+               aria-label="Slide 2"></button>
+         </div>
+
+         <!-- Slides -->
+         <div class="carousel-inner">
+            <div class="carousel-item capabilities-carousel-item active">
+               <img src="./images/banner1.jpg"
+                  class="d-block w-100" alt="Slide 1">
+               <div class="capabilities-hero-content">
+                  <h1>Turbocharge your Digital transformation journey with us</h1>
+                  <p>Innovative solutions, expert consulting, and scalable architecture to accelerate your success.</p>
+                  <div class="d-flex gap-3 flex-wrap">
+                     <a href="#our-team" class="btn btn-team px-4">Our Team</a>
+                     <a href="#contact" class="btn btn-contact px-4">Contact Us</a>
                   </div>
-                  <div class="carousel-item box_second_of_type active">
-                     <div class="row">
-                        <div class="col-lg-6">
-                           <div>
-                              <h2 class="h1">Turbocharge your Digital transformation journey with us </h2>
-                              <p class="pb-3">Innovative solutions, expert consulting, and scalable architecture to
-                                 accelerate your success.</p>
-                              <div>
-                                 <a href="./Team">
-                                    <span class="text-uppercase"><b>SPARC</b></span>
-                                    <span class="text-uppercase">Team</span>
-                                    <span class="spacer mt-2"></span>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+               </div>
+            </div>
+
+            <div class="carousel-item capabilities-carousel-item">
+               <img src="./images/banner2.jpg"
+                  class="d-block w-100" alt="Slide 2">
+               <div class="capabilities-hero-content">
+                  <h1>Delivering Value Through Solutions</h1>
+                  <p>We design strategic solutions that drive impact-bridging ideas, architecture, and execution.</p>
+                  <div class="d-flex gap-3 flex-wrap">
+                     <a href="#our-team" class="btn btn-team px-4">Our Team</a>
+                     <a href="#contact" class="btn btn-contact px-4">Contact Us</a>
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#capabilities-banner"
-                     data-bs-slide="prev">
-                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                     <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#capabilities-banner"
-                     data-bs-slide="next">
-                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                     <span class="visually-hidden">Next</span>
-                  </button>
                </div>
             </div>
          </div>
+
+         <!-- Controls -->
+         <button class="carousel-control-prev" type="button" data-bs-target="#capabilitiesCarousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#capabilitiesCarousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+         </button>
       </div>
    </section>
    <!-- end banner -->
