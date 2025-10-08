@@ -1,0 +1,198 @@
+.header-section::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+     z-index: 1;
+}
+
+#hero {
+
+     position: relative;
+     background-image: url('../../images/bg/bg-stories.jpeg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+
+     img {
+          position: relative;
+          z-index: 2;
+     }
+
+     .eyebrow {
+          position: relative;
+          z-index: 2;
+          display: inline-block;
+          padding: 6px 10px;
+          border-radius: 999px;
+          background: var(--icon-bg);
+          color: var(--dark-bg);
+          font-weight: 700;
+          font-size: 13px;
+     }
+
+     .header-main,
+     .kpi-strip {
+          position: relative;
+          z-index: 2;
+     }
+
+     .tagline {
+          color: var(--text-color);
+          margin: 0 0 18px
+     }
+
+     .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .kpi-strip {
+          position: relative;
+          z-index: 2;
+     }
+
+     .kpi-tile {
+          background: linear-gradient(90deg, var(--card-color-1), var(--card-color-5));
+          border-radius: 12px;
+          padding: 1rem;
+
+          .smallcaps {
+               font-size: .8rem;
+          }
+     }
+
+     .kpi-tile .bi {
+          font-size: 1.25rem;
+          color: var(--accent-2)
+     }
+
+     .kpi-value {
+          font-size: 1.35rem;
+          font-weight: 700
+     }
+}
+
+
+#main {
+     .timeline-title {
+          font-weight: 700;
+     }
+
+     aside {
+          position: sticky;
+          top: 28px;
+          height: calc(100vh - 56px);
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+          padding: 18px;
+          border-radius: 12px;
+
+          .nav-link {
+               color: var(--text-color);
+               transition: color 0.3s;
+               background: var(--card-bg);
+               margin-bottom: 5px;
+          }
+
+          .nav-link:hover {
+               color: var(--icon-bg);
+          }
+     }
+
+     #summary,
+     #module,
+     #business-benefit,
+     #highlights,
+     #challenges,
+     #roadmap {
+          padding-top: 80px;
+     }
+
+     #summary {
+          .glass-grid {
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               gap: 14px;
+               margin-top: 16px
+          }
+     }
+
+     .content {
+          .section {
+               background: linear-gradient(135deg, rgba(0, 229, 255, 0.06), rgba(142, 45, 226, 0.04));
+               padding: 28px;
+               border-radius: 1rem;
+
+               h2 {
+                    margin-top: 0;
+                    font-weight: 800;
+                    color: var(--text-color);
+                    font-size: 1.2rem;
+               }
+
+               .lead {
+                    color: var(--text-light);
+                    margin-top: 6px;
+                    font-size: 1rem;
+               }
+
+               .glass-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 14px;
+                    margin-top: 16px
+               }
+
+               .glass-card {
+                    background: none;
+                    border: 1px solid var(--text-muted);
+                    padding: 15px 15px 0;
+                    border-radius: 1rem;
+
+                    h3 {
+                         font-size: .8rem;
+                         color: var(--text-color);
+                    }
+
+                    h5 {
+                         color: var(--text-color);
+                         margin-top: 6px;
+                         font-size: 2rem;
+                    }
+               }
+
+               .steps {
+                    padding: 20px 0;
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    gap: 10px;
+
+                    .step-card {
+                         display: flex;
+                         flex-direction: column;
+                         align-items: center;
+                         justify-content: center;
+                         background: var(--card-bg);
+                         padding: 10px;
+                         border-radius: 1rem;
+
+                         h3 {
+                              font-size: 1rem;
+                         }
+
+                         p {
+                              font-size: .8rem;
+                              color: var(--text-light);
+                              margin-bottom: 0;
+                         }
+                    }
+               }
+          }
+     }
+}
