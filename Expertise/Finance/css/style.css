@@ -1,0 +1,141 @@
+/* Subnav */
+.subnav-sticky {
+     position: sticky;
+     top: 0px;
+     z-index: 1020;
+     background-color: var(--text-muted);
+     border-bottom: 1px solid var(--border-color);
+}
+
+.header-section::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+     z-index: 1;
+}
+
+#hero {
+
+     position: relative;
+     background-image: url('../images/bg-stories.jpeg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+
+     img {
+          position: relative;
+          z-index: 2;
+     }
+
+     .eyebrow {
+          position: relative;
+          z-index: 2;
+          display: inline-block;
+          padding: 6px 10px;
+          border-radius: 999px;
+          background: var(--icon-bg);
+          color: var(--dark-bg);
+          font-weight: 700;
+          font-size: 13px;
+     }
+
+     .header-main,
+     .kpi-strip {
+          position: relative;
+          z-index: 2;
+     }
+
+     .kpi-tile {
+          background: linear-gradient(90deg, var(--card-color-1), var(--card-color-5));
+          border-radius: 12px;
+          padding: 1rem
+     }
+
+     .kpi-tile .bi {
+          font-size: 1.25rem;
+          color: var(--accent-2)
+     }
+
+     .kpi-value {
+          font-size: 1.35rem;
+          font-weight: 700
+     }
+}
+
+
+#main {
+     .timeline-title {
+          font-weight: 700;
+     }
+
+     aside {
+          position: sticky;
+          top: 28px;
+          height: calc(100vh - 56px);
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+          padding: 18px;
+          border-radius: 12px;
+
+          .nav-link {
+               color: var(--text-color);
+               transition: color 0.3s;
+               background: var(--card-bg);
+               margin-bottom: 5px;
+          }
+
+          .nav-link:hover {
+               color: var(--icon-bg);
+          }
+     }
+
+     #finance,
+     #controlling,
+     #business-benefit,
+     #highlights,
+     #challenges,
+     #roadmap {
+          padding-top: 80px;
+     }
+
+     .content {
+          .section { 
+               padding: 28px;
+               border-radius: 1rem;
+
+               .text-accent {
+                    font-size: 1.5rem;
+               }
+
+               .accordion-button {
+                    background: transparent;
+                    color: var(--text-color)
+               }
+
+               .accordion-button:not(.collapsed) {
+                    background: rgba(255, 255, 255, .03);
+                    color: var(--text-color)
+               }
+
+               .accordion-item {
+                    background: transparent;
+                    border-color: var(--border-color)
+               }
+
+               .accordion-body {
+                    color: var(--text-light);
+
+                    i{
+                         padding-right: 10px;
+                         color: var(--icon-bg);
+                    }
+               }
+
+          }
+     }
+}
