@@ -18,7 +18,6 @@
      .capabilities-hero-content {
           position: absolute;
           top: 50%;
-          left: 5%;
           transform: translateY(-50%);
           color: white;
           max-width: 700px;
@@ -158,76 +157,114 @@
 /* Team Achievements */
 #team-achievements {
      background-color: var(--dark-bg);
+
+     .metrics-card {
+          border-radius: 1.5rem;
+          padding: 2.5rem 2.5rem 0 2.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
+          z-index: 1;
+     }
+
+     .metrics-card::before,
+     .metrics-card::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+     }
+
+     .metrics-card::before {
+          z-index: -1;
+          filter: blur(8px);
+          transform: scale(1.05);
+     }
+
+     .metrics-card::after {
+          z-index: 0;
+          background-color: rgba(0, 0, 0, 0.6);
+     }
+
+     .metric-icon-wrapper,
+     .metric-number-wrapper {
+          position: relative;
+          z-index: 2;
+          border-radius: 1rem;
+          margin-bottom: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+     }
+
+     /* Specific card colors */
+     .card-1 {
+          background-image: url('../images/bg/practice-inception.jpeg');
+     }
+
+     .card-2 {
+          background-image: url('../images/bg/engagement.jpeg');
+     }
+
+     .card-3 {
+          background-image: url('../images/bg/resources.jpeg');
+     }
+
+     .card-4 {
+          background-image: url('../images/bg/projects.jpeg');
+     }
+
+     .card-5 {
+          background-image: url('../images/bg/growth-rate.jpeg');
+     }
+
+     .card-6 {
+          background-image: url('../images/bg/active.jpeg');
+     }
+
+     .card-7 {
+          background-image: url('../images/bg/certification.jpeg');
+     }
+
+     .card-8 {
+          background-image: url('../images/bg/rating.jpeg');
+     }
+
+     .metric-icon {
+          font-size: 2.5rem;
+          color: var(--text-color);
+     }
+
+     .metric-number-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          flex-grow: 1;
+     }
+
+     .metric-number {
+          font-size: 2.75rem;
+          font-weight: 700;
+          line-height: 1.2;
+          color: var(--text-color);
+     }
+
+     .metric-title {
+          color: var(--text-color);
+          font-size: .9rem;
+          font-weight: 500;
+     }
 }
 
-.kpi-card {
-     position: relative;
-     height: 220px;
-     border-radius: 1rem;
-     overflow: hidden;
-     background-size: cover;
-     background-position: center;
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
-     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-
-.kpi-card:hover {
-     transform: scale(1.03);
-}
-
-.kpi-overlay {
-     position: absolute;
-     bottom: 0;
-     background: rgba(0, 0, 0, 0.6);
-     width: 100%;
-     padding: 1rem;
-}
-
-.kpi-value {
-     font-size: 1.8rem;
-     font-weight: 100;
-     color: var(--text-color);
-     margin-bottom: 0.25rem;
-}
-
-.kpi-label {
-     font-size: 1rem;
-     color: var(--text-color);
-     margin: 0;
-}
-
-.bg-1 {
-     background-image: url('../images/start.jpg');
-}
-
-.bg-2 {
-     background-image: url('../images/engagement.jpg');
-}
-
-.bg-3 {
-     background-image: url('../images/resources.jpg');
-}
-
-.bg-4 {
-     background-image: url('../images/project-delivered.jpg');
-}
-
-.bg-5 {
-     background-image: url('../images/growth.jpg');
-}
-
-.bg-6 {
-     background-image: url('../images/implement.jpg');
-}
-
-.bg-7 {
-     background-image: url('../images/certification.jpg');
-}
-
-.bg-8 {
-     background-image: url('../images/CSAT-rating.jpg');
-}
 
 /* #team-achievements .box h2 {
      font-size: 1.5rem;
@@ -323,11 +360,13 @@
           right: 1.5rem;
           text-decoration: none;
      }
-     .project-header{
-          img{
+
+     .project-header {
+          img {
                max-width: 70px;
           }
      }
+
      .project-title {
           font-size: 1.2rem;
           font-weight: 600;
@@ -368,7 +407,7 @@
           width: 100%;
           height: auto;
 
-          circle{
+          circle {
                cursor: pointer;
           }
      }
