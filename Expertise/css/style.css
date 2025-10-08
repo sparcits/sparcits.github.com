@@ -1,7 +1,7 @@
 /* Subnav */
 .subnav-sticky {
      position: sticky;
-     top:0px;
+     top: 0px;
      z-index: 1020;
      background-color: var(--text-muted);
      border-bottom: 1px solid var(--border-color);
@@ -142,111 +142,123 @@
      }
 }
 
-#services-hero .capabiliyList {
-     padding-bottom: 6%;
 
-     /* li {
-          padding: 0.5rem;
-          margin-bottom: 1rem;
-     } */
+#initial-overview-section {
 
-     .capabilityItem {
-          border: 1px solid rgba(255, 255, 255, 0.1);
+     .metrics-card {
+          border-radius: 1rem;
+          padding: 2.5rem 2.5rem 0 2.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
+          z-index: 1;
      }
 
-     button {
-          background: var(--dark-bg);
-          box-shadow: none;
+     .metrics-card::before,
+     .metrics-card::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+     }
+
+     .metrics-card::before {
+          z-index: -1;
+          filter: blur(8px);
+          transform: scale(1.05);
+     }
+
+     .metrics-card::after {
+          z-index: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+     }
+
+     .metric-icon-wrapper,
+     .metric-number-wrapper {
+          position: relative;
+          z-index: 2;
+          border-radius: 1rem;
+          margin-bottom: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+     }
+
+     .metric-icon {
+          font-size: 2.5rem;
           color: var(--text-color);
-          font-size: 2rem;
-
      }
 
-     .collapsed {
-          color: var(--text-muted);
+     .metric-number-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          flex-grow: 1;
      }
 
-     .accordion-button::after {
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23c2fe06' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-     }
-
-
-     .accordion-button:not(.collapsed)::after {
+     .metric-number {
+          font-size: 2.75rem;
+          font-weight: 700;
+          line-height: 1.2;
           color: var(--text-color);
      }
+
+     .metric-title {
+          color: var(--text-color);
+          font-size: .9rem;
+          font-weight: 500;
+     }
+
+     .card-1 {
+          background-image: url('../images/bg/fi.jpeg');
+     }
+
+     .card-2 {
+          background-image: url('../images/bg/sales.jpeg');
+     }
+
+     .card-3 {
+          background-image: url('../images/bg/Procurement.jpeg');
+     }
+
+     .card-4 {
+          background-image: url('../images/bg/supply-chain.jpeg');
+     }
+
+     .card-5 {
+          background-image: url('../images/bg/manufacturing.jpeg');
+     }
+
+     .card-6 {
+          background-image: url('../images/bg/Warehouse.jpeg');
+     }
+
+     .card-7 {
+          background-image: url('../images/bg/basis.jpeg');
+     }
+
+     .card-8 {
+          background-image: url('../images/bg/security.jpeg');
+     }
+
+     .card-9 {
+          background-image: url('../images/bg/abap.jpeg');
+     }
+
 }
 
-#services-hero .capabiliyListContent {
-     .layout-4col {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 1.5rem;
-          align-items: start;
-     }
-
-     .layout-5col {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 1rem;
-     }
-
-     .covergae-box {
-          .card {
-               background-color: var(--card-bg);
-               color: var(--text-color);
-               border-radius: 0.75rem;
-               padding: 1.5rem;
-               border: 1px solid var(--border-color);
-               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-               transition: transform 0.2s ease;
-
-               p {
-                    font-size: 10px;
-               }
-
-               .icon {
-                    background-color: var(--icon-bg);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-bottom: 10px;
-
-                    i {
-                         color: var(--dark-bg);
-                    }
-               }
-
-               .sub-card {
-                    background-color: rgba(255, 255, 255, 0.05);
-                    border: 1px solid var(--border-color, #2a2a2a);
-                    border-radius: 0.5rem;
-                    transition: background 0.3s ease, transform 0.2s ease;
-
-                    small {
-                         font-size: .7rem;
-                    }
-               }
-
-               .sub-card:hover {
-                    background-color: rgba(255, 255, 255, 0.1);
-                    transform: scale(1.02);
-               }
-
-          }
-
-          .card:hover {
-               transform: translateY(-4px);
-          }
-
-          .card h5 {
-               font-size: .8rem;
-          }
-     }
-}
-
-#services-hero .capabiliyList .active {
+/* #services-hero .capabiliyList .active {
      color: rgba(255, 255, 255, 1) !important;
-}
+} */
 
 /* Service Logo */
 
