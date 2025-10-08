@@ -1,5 +1,6 @@
 /* Icons */
 @import url("./icons/bootstrap-icons.min.css");
+
 /* ===========================================================
 Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
 =============================================================*/
@@ -44,6 +45,15 @@ Font Family: VW Head (Regular & Bold), VW text (Regular & Bold)
      --border-color: rgba(255, 255, 255, 0.1);
      --icon-bg: #c2fe06;
      --teal: #008C82;
+     /* Card Colors */
+     --card-color-1: #004c44;
+     --card-color-2: #005a5a;
+     --card-color-3: #006b72;
+     --card-color-4: #008080;
+     --card-color-5: #009999;
+     --card-color-6: #006b72;
+     --card-color-7: #005a5a;
+     --card-color-8: #004c44;
      --sidenav-size: 150px;
      --left-position: 90%;
      --transition-time: 1.2s cubic-bezier(0.25, 1, 0.5, 1);
@@ -66,13 +76,16 @@ body {
      font-weight: normal;
      min-height: 100vh;
 }
-a{
+
+a {
      color: var(--text-color);
      text-decoration: none;
 }
-a:hover{
+
+a:hover {
      color: var(--icon-bg);
 }
+
 button {
      border: 0;
      margin: 0;
@@ -135,6 +148,23 @@ img {
 
 .navbar-toggler {
      border-color: var(--border-color);
+}
+
+.navbar-toggler-icon {
+     filter: invert(1);
+}
+
+/* --- Mega Menu Custom Styling --- */
+.drpdown-menu {
+/*      background-color: var(--card-bg); */
+     z-index: 1021;
+
+}
+
+.divider {
+     height: 1px;
+     background-color: var(--border-color);
+     margin: 1rem 0;
 }
 
 /* End Header Area */
